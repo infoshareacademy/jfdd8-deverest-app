@@ -4,7 +4,11 @@ class EventList extends React.Component {
   render() {
     return (
       <div>
-
+      <ul>
+        <li>Raz</li>
+        <li>Dwa</li>
+        <li>Trzy</li>
+      </ul>
       </div>
     )
   }

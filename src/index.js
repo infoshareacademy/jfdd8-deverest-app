@@ -17,6 +17,8 @@ import AddScreen from './AddScreen';
 import Details from './Details';
 import EventsManager from './EventsManager'
 import registerServiceWorker from './registerServiceWorker';
+import Calendar from "./Calendar";
+import EventList from "./EventList";
 
 ReactDOM.render(
   <Router>
@@ -27,6 +29,8 @@ ReactDOM.render(
         <Route exact path="/" component={App}/>
         <Route path="/addscreen" component={AddScreen}/>
         <Route path="/details" component={Details}/>
+        {/*<Route path="/calendar" component={Calendar}/>*/}
+        {/*<Route path="/eventslist" component={EventList}/>*/}
       </Switch>
     </div>
 
