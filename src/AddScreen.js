@@ -3,8 +3,8 @@ import React from 'react'
 class AddScreen extends React.Component {
   render() {
     return (
-      <div>
-
+      <div class="ui input">
+      <input type="text" placeholder="Search..." />
       </div>
     )
   }
