@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar/>
-        <Button basic color='blue'>Blue</Button>
+        <Button basic color='blue'>Add Event</Button>
       </div>
     );
   }
