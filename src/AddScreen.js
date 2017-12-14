@@ -6,7 +6,8 @@ import moment from 'moment';
 
 class AddScreen extends React.Component {
   state = {
-    taskInputValue: '',
+    nameInputValue: '',
+    numberInputValue: '',
     events: [
       {
         id: 1,
@@ -34,21 +35,28 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.taskInputValue
+        content: this.state.nameInputValue + this.state.numberInputValue
       }),
-      taskInputValue: ''
+      nameInputValue: '',
+      numberInputValue: ''
     });
   };
 
-  handleChange = (date) => {
+  handleTimeChange = (date) => {
     this.setState({
       startDate: date
     });
   };
 
-  handleTextChange = item => {
+  handleNameChange = item => {
     this.setState({
-      taskInputValue: item.target.value
+      nameInputValue: item.target.value
+    })
+  };
+
+  handleNumberChange = item => {
+    this.setState({
+      numberInputValue: item.target.value
     })
   };
 
@@ -59,10 +67,19 @@ class AddScreen extends React.Component {
           <Form.Field>
             <label>Name your party</label>
             <input
-              value={this.state.taskInputValue}
-              onChange={this.handleTextChange}
+              value={this.state.nameInputValue}
+              onChange={this.handleNameChange}
               placeholder="Write your party name here..."
               />
+          </Form.Field>
+
+          <Form.Field>
+            <label>Add guests number</label>
+            <input
+              value={this.state.numberInputValue}
+              onChange={this.handleNumberChange}
+              placeholder="Write number of your guests here..."
+            />
           </Form.Field>
 
           <Button
@@ -84,7 +101,7 @@ class AddScreen extends React.Component {
 
         <DatePicker
           selected={this.state.startDate}
-          onChange={this.handleChange}
+          onChange={this.handleTimeChange}
           showTimeSelect
           timeFormat="HH:mm"
           timeIntervals={15}
