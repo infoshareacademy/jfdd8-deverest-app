@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SearchBar from './SearchBar';
+import { Button } from 'semantic-ui-react'
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,13 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SearchBar/>
+        <Button basic color='blue'>Add Event</Button>
       </div>
     );
   }
