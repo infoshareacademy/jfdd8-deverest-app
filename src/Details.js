@@ -1,11 +1,11 @@
 import React from 'react'
-
+import './Details.css'
+import { Button, Segment } from 'semantic-ui-react'
 class Details extends React.Component {
   render() {
     return (
-      <div>
+        <Button inverted color='orange'>Edit</Button>
 
-      </div>
     )
   }
 }
