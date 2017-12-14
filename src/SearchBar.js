@@ -29,6 +29,7 @@ class SearchBar extends React.Component {
             link: true,
             onClick:()=>console.log('hello') }}
           placeholder='Search...'
+          onChange={this.handleTermChange}
         />
       </div>
   )
