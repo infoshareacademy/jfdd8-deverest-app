@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import { Button } from 'semantic-ui-react'
 import logo from './logo.svg';
 import './App.css';
+import EventsManager from "./EventsManager";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <SearchBar/>
         <Button basic color='blue'>Add Event</Button>
+          <EventsManager/>
       </div>
     );
   }

@@ -1,18 +1,21 @@
 
-import React from 'react'
+import React, { Component } from 'react'
 import { Tab } from 'semantic-ui-react'
+import Calendar from "./Calendar";
+import EventList from "./EventList";
 
 const panes = [
-    { menuItem: 'Tab 1', render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane> },
-    { menuItem: 'Tab 2', render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane> },
-    { menuItem: 'Tab 3', render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane> },
-]
+    { menuItem: 'Calendar', render: () => <Tab.Pane attached={false}><Calendar/></Tab.Pane> },
+    { menuItem: 'List', render: () => <Tab.Pane attached={false}><EventList/></Tab.Pane> },
+    ]
 
-const TabExampleSecondary = () => (
-  <Tab menu={{ secondary: true }} panes={panes} />
-)
-
-
+class EventsManager extends Component {
+    render() {
+        return (
+          <Tab menu={{ secondary: true }} panes={panes} />
+        )
+    }
+}
 
 
 export default EventsManager;
