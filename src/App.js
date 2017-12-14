@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <SearchBar/>
         <Button basic color='blue'>Add Event</Button>
-        <EventsManager/>
+          <EventsManager/>
       </div>
     );
   }
