@@ -6,6 +6,7 @@ import moment from 'moment';
 
 class AddScreen extends React.Component {
   state = {
+    taskInputValue: '',
     events: [
       {
         id: 1,
@@ -33,8 +34,9 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.inputField.value
-      })
+        content: this.state.taskInputValue
+      }),
+      taskInputValue: ''
     });
   };
 
@@ -44,16 +46,23 @@ class AddScreen extends React.Component {
     });
   };
 
+  handleTextChange = item => {
+    this.setState({
+      taskInputValue: item.target.value
+    })
+  };
+
   render() {
     return (
       <div>
-
         <Form onSubmit={this.addEvent}>
           <Form.Field>
             <label>Name your party</label>
             <input
-              ref={element => this.inputField = element}
-              placeholder='party name'/>
+              value={this.state.taskInputValue}
+              onChange={this.handleTextChange}
+              placeholder="Write your party name here..."
+              />
           </Form.Field>
 
           <Button
