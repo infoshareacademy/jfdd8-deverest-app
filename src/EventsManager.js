@@ -9,11 +9,19 @@ class EventsManager extends React.Component {
   render() {
     return (
       <div>
-          <Button attached='left' >Calendar</Button>
-          <Button attached='right'>List</Button>
+          <Button
+            size='mini' color ='blue'
+            onClick={this.showCalendar}
+          >Calendar
+          </Button>
+          <Button
+            size='mini' color='blue'
+          >List
+          </Button>
+
           <div>
-              <Calendar/>
-              <EventList/>
+              {/*<Calendar/>*/}
+              {/*<EventList/>*/}
           </div>
       </div>
     )
