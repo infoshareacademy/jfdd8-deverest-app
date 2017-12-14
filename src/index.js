@@ -14,7 +14,9 @@ import './index.css';
 import App from './App';
 import AddScreen from './AddScreen';
 import Details from './Details';
+
 import registerServiceWorker from './registerServiceWorker';
+
 
 ReactDOM.render(
   <Router>
