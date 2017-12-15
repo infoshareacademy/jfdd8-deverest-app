@@ -9,9 +9,10 @@ class App extends Component {
     searchPhrase: ''
   }
 
-  onSearch = () => {
+  // onSearch = () => {
+  //
+  // }
 
-  }
 
   render() {
     return (
@@ -20,7 +21,8 @@ class App extends Component {
         <Button basic color='blue'>Add Event</Button>
           <EventsManager
             searchPhrase={this.state.searchPhrase}
-            onSearch={this.onSearch}/>
+            // onSearch={this.onSearch}
+          />
       </div>
     );
   }
