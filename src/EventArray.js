@@ -21,5 +21,10 @@ export default [
     'start': new Date(2017, 11, 24),
     'end': new Date(2017, 11, 30),
   },
+  {
+    'title': 'Impreza u Kaśki',
+    'start': new Date(2017, 11, 15),
+    'end': new Date(2017, 11, 15),
+  },
 
 ]
