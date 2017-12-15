@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
+import events from "./EventArray";
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
-let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
+// let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
-class Calendar extends React.Component {
+class Calendar extends Component {
     render() {
         return (
               <BigCalendar
@@ -14,9 +15,9 @@ class Calendar extends React.Component {
 
 
             events={events}
-            views={allViews}
+            // views={allViews}
             step={60}
-            defaultDate={new Date(2015, 3, 1)}
+            defaultDate={new Date()}
             />
         )
 
