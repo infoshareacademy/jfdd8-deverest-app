@@ -1,31 +1,21 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
+
+import React, { Component } from 'react'
+import { Tab } from 'semantic-ui-react'
 import Calendar from "./Calendar";
 import EventList from "./EventList";
 
+const panes = [
+    { menuItem: 'Calendar', render: () => <Tab.Pane attached={false}><Calendar/></Tab.Pane> },
+    { menuItem: 'List', render: () => <Tab.Pane attached={false}><EventList/></Tab.Pane> },
+    ]
 
-
-class EventsManager extends React.Component {
-  render() {
-    return (
-      <div>
-          <Button
-            size='mini' color ='blue'
-            onClick={this.showCalendar}
-          >Calendar
-          </Button>
-          <Button
-            size='mini' color='blue'
-          >List
-          </Button>
-
-          <div>
-              {/*<Calendar/>*/}
-              {/*<EventList/>*/}
-          </div>
-      </div>
-    )
-  }
+class EventsManager extends Component {
+    render() {
+        return (
+          <Tab menu={{ secondary: true }} panes={panes} />
+        )
+    }
 }
+
 
 export default EventsManager;
