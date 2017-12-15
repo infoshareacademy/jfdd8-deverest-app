@@ -26,14 +26,8 @@ class EventsManager extends Component {
     ]
   }
 
-  // search = (searchedPhrase) => {
-  //   this.setState({
-  //
-  //   })
-  // }
-
   render() {
-    const events = this.state.events.filter(event => event.title.includes(this.props.searchPhrase))
+    const events = this.state.events.filter(event => event.title.includes(this.props.searchPhrase));
 
     const panes = [
       {

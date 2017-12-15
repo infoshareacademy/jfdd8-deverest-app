@@ -14,13 +14,19 @@ class App extends Component {
       searchPhrase: text
     })
   }
-
+  handleClearTerm = () => {
+    this.setState({
+      searchPhrase: ''
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <SearchBar
           onSearch={this.onSearch}/>
+        <Button basic
+          onClick={this.handleClearTerm}>X</Button>
         <Button basic color='blue'>Add Event</Button>
           <EventsManager
             searchPhrase={this.state.searchPhrase}
