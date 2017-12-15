@@ -6,7 +6,8 @@ import moment from 'moment';
 
 class AddScreen extends React.Component {
   state = {
-    taskInputValue: '',
+    partyInputValue: '',
+    guestsInputValue: '',
     events: [
       {
         id: 1,
@@ -34,9 +35,10 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.taskInputValue
+        content: this.state.partyInputValue + this.state.guestsInputValue
       }),
-      taskInputValue: ''
+      partyInputValue: '',
+      guestsInputValue: ''
     });
   };
 
@@ -46,9 +48,15 @@ class AddScreen extends React.Component {
     });
   };
 
-  handleChange = event => {
+  handlePartyNameChange = event => {
     this.setState({
-      taskInputValue: event.target.value
+      partyInputValue: event.target.value
+    })
+  };
+
+  handleGuestsNumberChange = event => {
+    this.setState({
+      guestsInputValue: event.target.value
     })
   };
 
@@ -60,9 +68,17 @@ class AddScreen extends React.Component {
           <Form.Field>
             <label>Name your party</label>
             <input
-              value={this.state.taskInputValue}
-              onChange={this.handleChange}
+              value={this.state.partyInputValue}
+              onChange={this.handlePartyNameChange}
               placeholder='Put your party name here...'/>
+          </Form.Field>
+
+          <Form.Field>
+            <label>Name your party</label>
+            <input
+              value={this.state.guestsInputValue}
+              onChange={this.handleGuestsNumberChange}
+              placeholder='Put number of guests here...'/>
           </Form.Field>
 
           <Button
