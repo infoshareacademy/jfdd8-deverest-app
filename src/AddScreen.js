@@ -6,6 +6,7 @@ import moment from 'moment';
 
 class AddScreen extends React.Component {
   state = {
+    taskInputValue: '',
     events: [
       {
         id: 1,
@@ -33,15 +34,22 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.inputField.value
-      })
+        content: this.state.taskInputValue
+      }),
+      taskInputValue: ''
     });
   };
 
-  handleChange = (date) => {
+  handleTimeChange = (date) => {
     this.setState({
       startDate: date
     });
+  };
+
+  handleChange = event => {
+    this.setState({
+      taskInputValue: event.target.value
+    })
   };
 
   render() {
@@ -52,8 +60,9 @@ class AddScreen extends React.Component {
           <Form.Field>
             <label>Name your party</label>
             <input
-              ref={element => this.inputField = element}
-              placeholder='party name'/>
+              value={this.state.taskInputValue}
+              onChange={this.handleChange}
+              placeholder='Put your party name here...'/>
           </Form.Field>
 
           <Button
@@ -75,7 +84,7 @@ class AddScreen extends React.Component {
 
         <DatePicker
           selected={this.state.startDate}
-          onChange={this.handleChange}
+          onChange={this.handleTimeChange}
           showTimeSelect
           timeFormat="HH:mm"
           timeIntervals={15}
