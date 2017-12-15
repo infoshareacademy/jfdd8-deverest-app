@@ -74,7 +74,7 @@ class AddScreen extends React.Component {
           </Form.Field>
 
           <Form.Field>
-            <label>Name your party</label>
+            <label>Number of guests</label>
             <input
               value={this.state.guestsInputValue}
               onChange={this.handleGuestsNumberChange}
