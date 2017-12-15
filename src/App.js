@@ -9,19 +9,21 @@ class App extends Component {
     searchPhrase: ''
   }
 
-  // onSearch = () => {
-  //
-  // }
+  onSearch = (text) => {
+    this.setState({
+      searchPhrase: text
+    })
+  }
 
 
   render() {
     return (
       <div className="App">
-        <SearchBar/>
+        <SearchBar
+          onSearch={this.onSearch}/>
         <Button basic color='blue'>Add Event</Button>
           <EventsManager
             searchPhrase={this.state.searchPhrase}
-            // onSearch={this.onSearch}
           />
       </div>
     );

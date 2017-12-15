@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
   };
 
   search= () => {
-    // this.onSearch(this.state.term)
+    this.props.onSearch(this.state.term)
     this.setState({
       term: ''
     })
@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
             name: 'search',
             circular: true,
             link: true,
-            onClick:()=>console.log('hello') }}
+            onClick: this.search}}
           placeholder='Search...'
           onChange={this.handleTermChange}
         />
