@@ -7,15 +7,19 @@ import EventList from "./EventList";
 class EventsManager extends Component {
   state={
     events: [{
+      id: 1,
       title: 'Tytul',
     },
       {
+        id: 2,
         title: 'Jeden',
       },
       {
+        id: 3,
         title: 'Dwa',
       },
       {
+        id: 4,
         title: 'Trzy',
       },
 

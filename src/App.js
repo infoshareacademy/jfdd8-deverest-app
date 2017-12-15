@@ -9,6 +9,11 @@ class App extends Component {
   state={
     searchPhrase: ''
   }
+
+  onSearch = () => {
+
+  }
+
   render() {
     return (
       <div className="App">

@@ -6,7 +6,8 @@ class EventList extends React.Component {
     return (
       <div>
       <ul>
-        {this.props.events.map(event=><li>{event.title}</li>)}
+        {this.props.events.map(event=><div><li>{event.title}</li><Button basic color='teal'>Details</Button></div>)}
+
       </ul>
       </div>
     )
