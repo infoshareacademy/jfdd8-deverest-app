@@ -1,7 +1,6 @@
 import React from 'react'
 import './Details.css'
-// import { Button } from 'semantic-ui-react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Button, Header, Modal } from 'semantic-ui-react'
 class Details extends React.Component {
   render() {
     return (
@@ -25,6 +24,9 @@ class Details extends React.Component {
                         <li>osoba 3</li>
                         <li>osoba 4</li>
                         <li>osoba 5</li>
+                        <li>osoba 6</li>
+                        <li>osoba 7</li>
+                        <li>osoba 8</li>
                       </ul>
                     </div>
                   </Modal.Description>
