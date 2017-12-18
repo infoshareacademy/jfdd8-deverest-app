@@ -7,13 +7,13 @@ class Details extends React.Component {
         <div className='main'>
 
           <div className='edit'>
-            <Button primary>Edit</Button>
+            <Button color='orange'>Edit</Button>
           </div>
 
           <div className='data'>
-            <h1>Party Name</h1>
+            <h1>John's House Warming Party With Hookers</h1>
             <div className='modal'>
-              <Modal trigger={<Button>Show Guests</Button>}>
+              <Modal trigger={<Button color='orange'>Show Guests</Button>}>
                 <Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>
                 <Modal.Content image>
                   <Modal.Description>
