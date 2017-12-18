@@ -11,6 +11,7 @@ class Calendar extends Component {
           <div style={{ height: 600 }}>
               <BigCalendar
             {...this.props}
+           // event={zupa.map(event => ({ ...event, date: new Date(event.date)}))}
             events={events}
             defaultDate={new Date()}
             />

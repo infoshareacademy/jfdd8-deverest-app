@@ -37,7 +37,8 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.partyInputValue + this.state.guestsInputValue + this.state.namesInputValue
+        content: this.state.partyInputValue + this.state.guestsInputValue + this.state.namesInputValue,
+        date: this.state.startDate.toDate()
       }),
       partyInputValue: '',
       guestsInputValue: '',
@@ -106,7 +107,7 @@ class AddScreen extends React.Component {
               this.state.events.map(
                 item => (
                   <li key={item.id}>
-                    {item.content}
+                    {item.content} {item.date && item.date.toString()}
                   </li>
                 )
               )
