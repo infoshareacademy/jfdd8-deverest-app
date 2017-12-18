@@ -13,7 +13,7 @@
 }
 h1 {
     position: absolute;
-    top: 30px;
+    top: 10px;
 }
 
 .modal {
@@ -23,4 +23,19 @@ h1 {
 
 #modal-header-span {
     color: dodgerblue;
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    padding: 0;
 }
