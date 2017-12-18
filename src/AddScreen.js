@@ -10,20 +10,8 @@ class AddScreen extends React.Component {
     partyInputValue: '',
     guestsInputValue: '',
     namesInputValue: '',
-    events: [
-      {
-        id: 1,
-        content: 'Lucy\'s sweet 16th birthday!',
-      },
-      {
-        id: 2,
-        content: 'Gary\'s Supprise Party',
-      },
-      {
-        id: 3,
-        content: 'My "first" Wedding',
-      }
-    ],
+    events: [],
+    guestsNames: [],
     startDate: moment()
   };
 
@@ -37,13 +25,28 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.partyInputValue + this.state.guestsInputValue + this.state.namesInputValue
+        content: this.state.partyInputValue + ' ' + this.state.guestsInputValue
       }),
       partyInputValue: '',
       guestsInputValue: '',
+    });
+  };
+
+  addGuestsNames = () => {
+    this.setState({
+      guestsNames: this.state.guestsNames.concat({
+        id: this.state.guestsNames.map(
+          item => item.id
+        ).reduce(
+          (biggest, next) => Math.max(biggest, next),
+          0
+        ) + 1,
+        content: this.state.namesInputValue
+      }),
       namesInputValue: ''
     });
   };
+
 
   handleTimeChange = (date) => {
     this.setState({
@@ -71,6 +74,7 @@ class AddScreen extends React.Component {
 
   render() {
     return (
+      /* Adding party title and guests number */
       <div>
         <Form onSubmit={this.addEvent}>
           <Form.Group widths='equal'>
@@ -90,17 +94,7 @@ class AddScreen extends React.Component {
                      onChange={this.handleGuestsNumberChange}
                      placeholder='Write number of guests here...'/>
             </Form.Field>
-
-            <Form.Field>
-              <label>Add your guest here</label>
-              <Input
-                    size='small'
-                    value={this.state.namesInputValue}
-                    onChange={this.handleGuestsNamesChange}
-                    placeholder='Write your guest name...'/>
-            </Form.Field>
           </Form.Group>
-
           <ul>
             {
               this.state.events.map(
@@ -120,14 +114,41 @@ class AddScreen extends React.Component {
             timeFormat="HH:mm"
             timeIntervals={15}
             dateFormat="LLL"
-          /><br />
+          /><br/>
 
           <Button
-            type='submit'>Submit
+            type='submit'>Save
           </Button>
         </Form>
 
 
+
+        <Form onSubmit={this.addGuestsNames}>
+
+          <Form.Field>
+            <label>Add your guest here</label>
+            <Input
+              size='small'
+              value={this.state.namesInputValue}
+              onChange={this.handleGuestsNamesChange}
+              placeholder='Write your guest name...'/>
+          </Form.Field>
+          <Button
+            type='submit'>Add
+          </Button>
+
+          <ul>
+            {
+              this.state.guestsNames.map(
+                item => (
+                  <li key={item.id}>
+                    {item.content}
+                  </li>
+                )
+              )
+            }
+          </ul>
+        </Form>
 
       </div>
     )
