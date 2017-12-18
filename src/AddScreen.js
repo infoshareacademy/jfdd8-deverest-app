@@ -75,13 +75,14 @@ class AddScreen extends React.Component {
   render() {
     return (
       /* Adding party title and guests number */
-      <div>
+      <div className="AddScreen-container">
         <Form onSubmit={this.addEvent}>
-          <label>Name your party</label>
-          <Input size='medium'
+          <label className="AddScreen-PartyName">YOUR PARTY TITLE</label><br /><br />
+          <Input
+                 size='large'
                  value={this.state.partyInputValue}
                  onChange={this.handlePartyNameChange}
-                 placeholder='Write party name here...'
+                 placeholder='Name your party here...'
           />
 
           <ul>
@@ -96,6 +97,7 @@ class AddScreen extends React.Component {
             }
           </ul>
 
+          <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
           <DatePicker
             selected={this.state.startDate}
             onChange={this.handleTimeChange}
@@ -105,9 +107,9 @@ class AddScreen extends React.Component {
             dateFormat="LLL"
           /><br/>
 
-          <label>Add your guest here</label>
+          <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
           <Input
-            size='medium'
+            size='large'
             value={this.state.namesInputValue}
             onChange={this.handleGuestsNamesChange}
             placeholder='Write your guest name...'
@@ -115,7 +117,7 @@ class AddScreen extends React.Component {
 
           <Input onClick={this.addGuestsNames}
                  type="button"
-                 value="Add"
+                 value="+"
           />
 
           <ul>
