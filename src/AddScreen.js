@@ -77,8 +77,8 @@ class AddScreen extends React.Component {
       /* Adding party title and guests number */
       <div className="AddScreen-container">
         <Form onSubmit={this.addEvent}>
-          <label className="AddScreen-PartyName">YOUR PARTY TITLE</label><br /><br />
-          <Input
+          <label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
+          <Input className="AddScreen-PartyInput"
                  size='large'
                  value={this.state.partyInputValue}
                  onChange={this.handlePartyNameChange}
@@ -89,7 +89,8 @@ class AddScreen extends React.Component {
             {
               this.state.events.map(
                 item => (
-                  <li key={item.id}>
+                  <li key={item.id}
+                      className="AddScreen-List">
                     {item.content}
                   </li>
                 )
@@ -108,7 +109,7 @@ class AddScreen extends React.Component {
           /><br/>
 
           <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
-          <Input
+          <Input className="AddScreen-GuestsInput"
             size='large'
             value={this.state.namesInputValue}
             onChange={this.handleGuestsNamesChange}
@@ -124,9 +125,10 @@ class AddScreen extends React.Component {
             {
               this.state.guestsNames.map(
                 task => (
-                  <li key={task.id}>
+                  <li key={task.id}
+                  className="AddScreen-List">
                     {task.content}
-                    <button type="button"
+                    <button
                            data-task-id={task.id}
                            onClick={this.handleDeleteClick}
                            >
@@ -137,12 +139,10 @@ class AddScreen extends React.Component {
             }
           </ul>
           <br/><br/>
-          <Button
+          <Button color="black"
             type='submit'>Save
           </Button>
         </Form>
-
-
       </div>
     )
   }
