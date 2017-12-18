@@ -8,7 +8,6 @@ import './AddScreen.css'
 class AddScreen extends React.Component {
   state = {
     partyInputValue: '',
-    guestsInputValue: '',
     namesInputValue: '',
     events: [],
     guestsNames: [],
@@ -25,10 +24,9 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.partyInputValue + ' ' + this.state.guestsInputValue
+        content: this.state.partyInputValue
       }),
       partyInputValue: '',
-      guestsInputValue: '',
     });
   };
 
@@ -60,16 +58,14 @@ class AddScreen extends React.Component {
     })
   };
 
-  handleGuestsNumberChange = event => {
-    this.setState({
-      guestsInputValue: event.target.value
-    })
-  };
-
   handleGuestsNamesChange = event => {
     this.setState({
       namesInputValue: event.target.value
     })
+  };
+
+  handleDeleteClick = event => {
+    console.log(event.target.dataset.itemId);
   };
 
   render() {
@@ -77,24 +73,13 @@ class AddScreen extends React.Component {
       /* Adding party title and guests number */
       <div>
         <Form onSubmit={this.addEvent}>
-          <Form.Group widths='equal'>
-
-            <Form.Field>
-              <label>Name your party</label>
-              <Input size='small'
-                     value={this.state.partyInputValue}
-                     onChange={this.handlePartyNameChange}
-                     placeholder='Write party name here...'/>
-            </Form.Field>
-
-            <Form.Field>
-              <label>Number of guests</label>
-              <Input size='small'
-                     value={this.state.guestsInputValue}
-                     onChange={this.handleGuestsNumberChange}
-                     placeholder='Write number of guests here...'/>
-            </Form.Field>
-          </Form.Group>
+          <Form.Field>
+            <label>Name your party</label>
+            <Input size='small'
+                   value={this.state.partyInputValue}
+                   onChange={this.handlePartyNameChange}
+                   placeholder='Write party name here...'/>
+          </Form.Field>
           <ul>
             {
               this.state.events.map(
@@ -116,15 +101,6 @@ class AddScreen extends React.Component {
             dateFormat="LLL"
           /><br/>
 
-          <Button
-            type='submit'>Save
-          </Button>
-        </Form>
-
-
-
-        <Form onSubmit={this.addGuestsNames}>
-
           <Form.Field>
             <label>Add your guest here</label>
             <Input
@@ -133,9 +109,11 @@ class AddScreen extends React.Component {
               onChange={this.handleGuestsNamesChange}
               placeholder='Write your guest name...'/>
           </Form.Field>
-          <Button
-            type='submit'>Add
-          </Button>
+
+          <Input onClick={this.addGuestsNames}
+                 type="button"
+                 value="Add"
+          />
 
           <ul>
             {
@@ -143,12 +121,24 @@ class AddScreen extends React.Component {
                 item => (
                   <li key={item.id}>
                     {item.content}
+                    <Input type="button"
+                      data-item-id={item.id}
+                      onClick={this.handleDeleteClick}
+                           value="delete"
+                    />
+
+
                   </li>
                 )
               )
             }
           </ul>
+          <br/><br/>
+          <Button
+            type='submit'>Save
+          </Button>
         </Form>
+
 
       </div>
     )
