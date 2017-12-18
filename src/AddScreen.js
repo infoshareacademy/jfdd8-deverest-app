@@ -14,7 +14,6 @@ class AddScreen extends React.Component {
     startDate: moment()
   };
 
-
   addEvent = () => {
     this.setState({
       events: this.state.events.concat({
@@ -34,7 +33,7 @@ class AddScreen extends React.Component {
     this.setState({
       guestsNames: this.state.guestsNames.concat({
         id: this.state.guestsNames.map(
-          item => item.id
+          event => event.id
         ).reduce(
           (biggest, next) => Math.max(biggest, next),
           0
@@ -52,20 +51,25 @@ class AddScreen extends React.Component {
     });
   };
 
-  handlePartyNameChange = event => {
+  handlePartyNameChange = item => {
     this.setState({
-      partyInputValue: event.target.value
+      partyInputValue: item.target.value
     })
   };
 
-  handleGuestsNamesChange = event => {
+  handleGuestsNamesChange = item => {
     this.setState({
-      namesInputValue: event.target.value
+      namesInputValue: item.target.value
     })
   };
 
   handleDeleteClick = event => {
-    console.log(event.target.dataset.itemId);
+    console.log(event.target.dataset.taskId);
+    this.setState({
+      guestsNames: this.state.guestsNames.filter(
+        task => task.id !== parseInt(event.target.dataset.taskId, 10)
+      )
+    })
   };
 
   render() {
@@ -73,13 +77,13 @@ class AddScreen extends React.Component {
       /* Adding party title and guests number */
       <div>
         <Form onSubmit={this.addEvent}>
-          <Form.Field>
-            <label>Name your party</label>
-            <Input size='small'
-                   value={this.state.partyInputValue}
-                   onChange={this.handlePartyNameChange}
-                   placeholder='Write party name here...'/>
-          </Form.Field>
+          <label>Name your party</label>
+          <Input size='medium'
+                 value={this.state.partyInputValue}
+                 onChange={this.handlePartyNameChange}
+                 placeholder='Write party name here...'
+          />
+
           <ul>
             {
               this.state.events.map(
@@ -101,14 +105,13 @@ class AddScreen extends React.Component {
             dateFormat="LLL"
           /><br/>
 
-          <Form.Field>
-            <label>Add your guest here</label>
-            <Input
-              size='small'
-              value={this.state.namesInputValue}
-              onChange={this.handleGuestsNamesChange}
-              placeholder='Write your guest name...'/>
-          </Form.Field>
+          <label>Add your guest here</label>
+          <Input
+            size='medium'
+            value={this.state.namesInputValue}
+            onChange={this.handleGuestsNamesChange}
+            placeholder='Write your guest name...'
+          />
 
           <Input onClick={this.addGuestsNames}
                  type="button"
@@ -118,16 +121,14 @@ class AddScreen extends React.Component {
           <ul>
             {
               this.state.guestsNames.map(
-                item => (
-                  <li key={item.id}>
-                    {item.content}
-                    <Input type="button"
-                      data-item-id={item.id}
-                      onClick={this.handleDeleteClick}
-                           value="delete"
-                    />
-
-
+                task => (
+                  <li key={task.id}>
+                    {task.content}
+                    <button type="button"
+                           data-task-id={task.id}
+                           onClick={this.handleDeleteClick}
+                           >
+                    delete</button>
                   </li>
                 )
               )
