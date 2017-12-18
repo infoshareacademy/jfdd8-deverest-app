@@ -9,7 +9,6 @@ class Details extends React.Component {
           <div className='edit'>
             <Button color='orange'>Edit</Button>
           </div>
-
           <div className='data'>
             <h1>John's House Warming Party With Hookers</h1>
             <h2>Starts at: ............................</h2>
