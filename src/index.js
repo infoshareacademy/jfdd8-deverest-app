@@ -8,8 +8,8 @@ import {
 } from 'react-router-dom';
 
 import 'semantic-ui-css/semantic.min.css';
-import 'react-datepicker/dist/react-datepicker.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import './index.css';
 
 import App from './App';
