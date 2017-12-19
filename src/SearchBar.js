@@ -23,6 +23,7 @@ class SearchBar extends React.Component {
     return (
       <div>
         <Input
+          value={this.state.term}
           icon={{
             name: 'search',
             circular: true,
