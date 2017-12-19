@@ -8,25 +8,11 @@ import './AddScreen.css'
 class AddScreen extends React.Component {
   state = {
     partyInputValue: '',
-    guestsInputValue: '',
     namesInputValue: '',
-    events: [
-      {
-        id: 1,
-        content: 'Lucy\'s sweet 16th birthday!',
-      },
-      {
-        id: 2,
-        content: 'Gary\'s Supprise Party',
-      },
-      {
-        id: 3,
-        content: 'My "first" Wedding',
-      }
-    ],
+    events: [],
+    guestsNames: [],
     startDate: moment()
   };
-
 
   addEvent = () => {
     this.setState({
@@ -37,13 +23,27 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.partyInputValue + this.state.guestsInputValue + this.state.namesInputValue
+        content: this.state.partyInputValue
       }),
       partyInputValue: '',
-      guestsInputValue: '',
+    });
+  };
+
+  addGuestsNames = () => {
+    this.setState({
+      guestsNames: this.state.guestsNames.concat({
+        id: this.state.guestsNames.map(
+          event => event.id
+        ).reduce(
+          (biggest, next) => Math.max(biggest, next),
+          0
+        ) + 1,
+        content: this.state.namesInputValue
+      }),
       namesInputValue: ''
     });
   };
+
 
   handleTimeChange = (date) => {
     this.setState({
@@ -51,61 +51,46 @@ class AddScreen extends React.Component {
     });
   };
 
-  handlePartyNameChange = event => {
+  handlePartyNameChange = item => {
     this.setState({
-      partyInputValue: event.target.value
+      partyInputValue: item.target.value
     })
   };
 
-  handleGuestsNumberChange = event => {
+  handleGuestsNamesChange = item => {
     this.setState({
-      guestsInputValue: event.target.value
+      namesInputValue: item.target.value
     })
   };
 
-  handleGuestsNamesChange = event => {
+  handleDeleteClick = event => {
+    console.log(event.target.dataset.taskId);
     this.setState({
-      namesInputValue: event.target.value
+      guestsNames: this.state.guestsNames.filter(
+        task => task.id !== parseInt(event.target.dataset.taskId, 10)
+      )
     })
   };
 
   render() {
     return (
-      <div>
+      /* Adding party title and guests number */
+      <div className="AddScreen-container">
         <Form onSubmit={this.addEvent}>
-          <Form.Group widths='equal'>
-
-            <Form.Field>
-              <label>Name your party</label>
-              <Input size='small'
-                     value={this.state.partyInputValue}
-                     onChange={this.handlePartyNameChange}
-                     placeholder='Write party name here...'/>
-            </Form.Field>
-
-            <Form.Field>
-              <label>Number of guests</label>
-              <Input size='small'
-                     value={this.state.guestsInputValue}
-                     onChange={this.handleGuestsNumberChange}
-                     placeholder='Write number of guests here...'/>
-            </Form.Field>
-
-            <Form.Field>
-              <label>Add your guest here</label>
-              <Input
-                    size='small'
-                    value={this.state.namesInputValue}
-                    onChange={this.handleGuestsNamesChange}
-                    placeholder='Write your guest name...'/>
-            </Form.Field>
-          </Form.Group>
+          <label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
+          <Input className="AddScreen-PartyInput"
+                 size='large'
+                 value={this.state.partyInputValue}
+                 onChange={this.handlePartyNameChange}
+                 placeholder='Name your party here...'
+          />
 
           <ul>
             {
               this.state.events.map(
                 item => (
-                  <li key={item.id}>
+                  <li key={item.id}
+                      className="AddScreen-List">
                     {item.content}
                   </li>
                 )
@@ -113,22 +98,51 @@ class AddScreen extends React.Component {
             }
           </ul>
 
-          <DatePicker
+          <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
+          <DatePicker className="AddScreen-DatePicker"
             selected={this.state.startDate}
             onChange={this.handleTimeChange}
             showTimeSelect
             timeFormat="HH:mm"
             timeIntervals={15}
             dateFormat="LLL"
-          /><br />
+          /><br/>
 
-          <Button
-            type='submit'>Submit
+          <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
+          <Input className="AddScreen-GuestsInput"
+            size='large'
+            value={this.state.namesInputValue}
+            onChange={this.handleGuestsNamesChange}
+            placeholder='Write your guest name...'
+          />
+
+          <Input onClick={this.addGuestsNames}
+                 type="button"
+                 value="+"
+          />
+
+          <ul>
+            {
+              this.state.guestsNames.map(
+                task => (
+                  <li key={task.id}
+                  className="AddScreen-List">
+                    {task.content}
+                    <button
+                           data-task-id={task.id}
+                           onClick={this.handleDeleteClick}
+                           >
+                    delete</button>
+                  </li>
+                )
+              )
+            }
+          </ul>
+          <br/><br/>
+          <Button color="black"
+            type='submit'>Save
           </Button>
         </Form>
-
-
-
       </div>
     )
   }
