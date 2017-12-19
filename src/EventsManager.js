@@ -7,42 +7,68 @@ import AddScreen from './AddScreen'
 
 class EventsManager extends Component {
   state = {
-    events: [{
-      id: 1,
-      title: 'Tytul',
-    },
+    events: [
+      {
+        id: 1,
+        'title': 'Impreza u Rafała',
+        'start': new Date(2017, 11, 15),
+        'end': new Date(2017, 11, 17),
+        desc: 'Nauka Reacta',
+      },
       {
         id: 2,
-        title: 'Jeden',
+        'title': 'Impreza u Kuby',
+        'start': new Date(2017, 11, 19),
+        'end': new Date(2017, 11, 20),
       },
       {
         id: 3,
-        title: 'Dwa',
+        'title': 'Impreza u Roberta',
+        'start': new Date(2017, 11, 22),
+        'end': new Date(2017, 11, 22),
       },
-      {
-        id: 4,
-        title: 'Trzy',
-      },
+
 
     ]
   }
+//ma wylane czy tu jest jakis formularz/input
+  addEvent = (title) => {
 
-  componentWillMount (){
-    this.setState ({
+    this.setState({
+      events: this.state.events.concat({
+        id: this.state.events.map(
+          item => item.id
+        ).reduce(
+          (biggest, next) => Math.max(biggest, next),
+          0
+        ) + 1,
+        title: title
+      })
+    });
+  };
+
+  componentWillMount() {
+    this.setState({
       tasks: JSON.parse(localStorage.getItem('events') || '[]')
     })
   }
 
-  componentDidUpdate () {localStorage.setItem('events', JSON.stringify(this.state.events))
+  componentDidUpdate() {
+    localStorage.setItem('events', JSON.stringify(this.state.events))
   }
 
   render() {
-    const events = this.state.events.filter(event => event.title.includes(this.props.searchPhrase));
+    const events = this.state.events.filter(
+      event =>
+        event.title.includes(
+          this.props.searchPhrase
+        )
+    );
 
     const panes = [
       {
         menuItem: 'Calendar',
-        render: () => <Tab.Pane attached={false}><Calendar/></Tab.Pane>
+        render: () => <Tab.Pane attached={false}><Calendar events={this.state.events}/></Tab.Pane>
       },
       {
         menuItem: 'List',
@@ -64,20 +90,20 @@ class EventsManager extends Component {
     return (
       <div>
         <Modal trigger={<Button>Basic Modal</Button>} size='small'>
-          <Header icon='archive' content='Archive Old Messages' />
+          <Header icon='archive' content='Archive Old Messages'/>
           <Modal.Content>
-            <AddScreen/>
+            <AddScreen addEvent={this.addEvent}/>
           </Modal.Content>
           <Modal.Actions>
             <Button basic color='red' inverted>
-              <Icon name='remove' /> No
+              <Icon name='remove'/> No
             </Button>
             <Button color='green' inverted>
-              <Icon name='checkmark' /> Yes
+              <Icon name='checkmark'/> Yes
             </Button>
           </Modal.Actions>
         </Modal>
-      <Tab menu={{secondary: true}} panes={panes}/>
+        <Tab menu={{secondary: true}} panes={panes}/>
       </div>
     )
   }

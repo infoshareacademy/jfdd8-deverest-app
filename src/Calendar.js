@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
-import events from "./EventArray";
+// import events from "./EventArray";
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
@@ -11,7 +11,7 @@ class Calendar extends Component {
           <div style={{ height: 600 }}>
               <BigCalendar
             {...this.props}
-            events={events}
+            events={this.props.events}
             defaultDate={new Date()}
             />
           </div>
