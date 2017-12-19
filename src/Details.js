@@ -13,7 +13,7 @@ class Details extends React.Component {
             <h1>John's House Warming Party With Hookers</h1>
             <h2>Starts at: ............................</h2>
             <div className='modal'>
-              <Modal trigger={<Button color='orange'>Show Guests</Button>}>
+              <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='orange'>Show Guests</Button>}>
                 <Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>
                 <Modal.Content image>
                   <Modal.Description>
