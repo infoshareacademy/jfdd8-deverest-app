@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import { Button } from 'semantic-ui-react'
 import './App.css';
 import EventsManager from "./EventsManager";
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 class App extends Component {
   state={
@@ -27,7 +28,7 @@ class App extends Component {
           onSearch={this.onSearch}/>
         <Button basic
           onClick={this.handleClearTerm}>X</Button>
-        <Button basic color='blue'>Add Event</Button>
+        <Button basic color='blue' as={Link} to={'/addscreen'}>Add Event</Button>
           <EventsManager
             searchPhrase={this.state.searchPhrase}
           />

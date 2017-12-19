@@ -14,19 +14,29 @@ class AddScreen extends React.Component {
     startDate: moment()
   };
 
-  addEvent = () => {
+  // addEvent = () => {
+  //   this.setState({
+  //     events: this.state.events.concat({
+  //       id: this.state.events.map(
+  //         item => item.id
+  //       ).reduce(
+  //         (biggest, next) => Math.max(biggest, next),
+  //         0
+  //       ) + 1,
+  //       content: this.state.partyInputValue
+  //     }),
+  //     partyInputValue: '',
+  //   });
+  // };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.addEvent(
+      this.state.partyInputValue,
+    );
     this.setState({
-      events: this.state.events.concat({
-        id: this.state.events.map(
-          item => item.id
-        ).reduce(
-          (biggest, next) => Math.max(biggest, next),
-          0
-        ) + 1,
-        content: this.state.partyInputValue
-      }),
-      partyInputValue: '',
-    });
+      taskInputValue: ''
+    })
   };
 
   addGuestsNames = () => {
@@ -76,7 +86,7 @@ class AddScreen extends React.Component {
     return (
       /* Adding party title and guests number */
       <div className="AddScreen-container">
-        <Form onSubmit={this.addEvent}>
+        <Form onSubmit={this.handleSubmit}>
           <label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
           <Input className="AddScreen-PartyInput"
                  size='large'
