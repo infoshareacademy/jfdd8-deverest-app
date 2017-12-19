@@ -63,3 +63,10 @@ ul {
 .main {
     height: 100vh;
 }
+.dateView {
+    color: white;
+    background-color: black;
+    opacity: .6;
+    padding: 5px;
+    border-radius: 10px;
+}

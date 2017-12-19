@@ -1,19 +1,22 @@
 import React from 'react'
 import './Details.css'
 import { Button, Header, Modal } from 'semantic-ui-react'
+
+
+
 class Details extends React.Component {
   render() {
     return (
         <div className='main'>
 
           <div className='edit'>
-            <Button color='orange'>Edit</Button>
+            <Button color='black'>Edit</Button>
           </div>
           <div className='data'>
             <h1>John's House Warming Party With Hookers</h1>
-            <h2>Starts at: ............................</h2>
+            <h2>Starts at: <span className='dateView'>{new Date().toLocaleString()}</span></h2>
             <div className='modal'>
-              <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='orange'>Show Guests</Button>}>
+              <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='black'>Show Guests</Button>}>
                 <Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>
                 <Modal.Content image>
                   <Modal.Description>
