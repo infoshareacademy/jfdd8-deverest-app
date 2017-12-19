@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import {Tab} from 'semantic-ui-react'
+import {Tab, Modal, Button, Icon, Header} from 'semantic-ui-react'
 import Calendar from "./Calendar";
 import EventList from "./EventList";
+import AddScreen from './AddScreen'
 
 
 class EventsManager extends Component {
@@ -26,6 +27,15 @@ class EventsManager extends Component {
     ]
   }
 
+  componentWillMount (){
+    this.setState ({
+      tasks: JSON.parse(localStorage.getItem('events') || '[]')
+    })
+  }
+
+  componentDidUpdate () {localStorage.setItem('events', JSON.stringify(this.state.events))
+  }
+
   render() {
     const events = this.state.events.filter(event => event.title.includes(this.props.searchPhrase));
 
@@ -39,6 +49,8 @@ class EventsManager extends Component {
         render: () => (
           <Tab.Pane
             attached={false}
+            // searchPhrase={this.props.searchPhrase}
+            // events={events}
           >
             <EventList
               searchPhrase={this.props.searchPhrase}
@@ -50,7 +62,23 @@ class EventsManager extends Component {
     ];
 
     return (
+      <div>
+        <Modal trigger={<Button>Basic Modal</Button>} size='small'>
+          <Header icon='archive' content='Archive Old Messages' />
+          <Modal.Content>
+            <AddScreen/>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button basic color='red' inverted>
+              <Icon name='remove' /> No
+            </Button>
+            <Button color='green' inverted>
+              <Icon name='checkmark' /> Yes
+            </Button>
+          </Modal.Actions>
+        </Modal>
       <Tab menu={{secondary: true}} panes={panes}/>
+      </div>
     )
   }
 }
