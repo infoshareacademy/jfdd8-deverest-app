@@ -99,7 +99,7 @@ class AddScreen extends React.Component {
           </ul>
 
           <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
-          <DatePicker
+          <DatePicker className="AddScreen-DatePicker"
             selected={this.state.startDate}
             onChange={this.handleTimeChange}
             showTimeSelect
