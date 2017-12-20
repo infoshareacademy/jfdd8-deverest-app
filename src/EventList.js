@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+// import { Button } from 'semantic-ui-react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import {Tab, Modal, Button, Icon, Header} from 'semantic-ui-react'
+import Details from './Details'
 
 class EventList extends React.Component {
   render() {
