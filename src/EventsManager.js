@@ -32,7 +32,7 @@ class EventsManager extends Component {
     ]
   }
 //ma wylane czy tu jest jakis formularz/input
-  addEvent = (title) => {
+  addEvent = (title, start) => {
 
     this.setState({
       events: this.state.events.concat({
@@ -42,14 +42,15 @@ class EventsManager extends Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        title: title
+        title: title,
+        start: start
       })
     });
   };
 
   componentWillMount() {
     this.setState({
-      tasks: JSON.parse(localStorage.getItem('events') || '[]')
+      events: JSON.parse(localStorage.getItem('events') || '[]')
     })
   }
 
