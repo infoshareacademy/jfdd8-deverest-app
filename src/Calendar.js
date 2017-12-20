@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react';
+import BigCalendar from 'react-big-calendar';
+import moment from 'moment';
+// import events from "./EventArray";
 
-class Calendar extends React.Component {
-  render() {
-    return (
-      <div>
+BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
-      </div>
-    )
-  }
+class Calendar extends Component {
+    render() {
+        return (
+          <div style={{ height: 600 }}>
+              <BigCalendar
+            {...this.props}
+            events={this.props.events}
+            defaultDate={new Date()}
+            />
+          </div>
+        )
+
+    }
 }
 
 export default Calendar;

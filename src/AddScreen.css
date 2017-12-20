@@ -1,0 +1,39 @@
+.AddScreen-container {
+    background: linear-gradient(to bottom, rgba(255,102,0,0.7), rgba(0,0,0,0.8));
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    padding-top: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.AddScreen-PartyName {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.AddScreen-InnerContainer {
+    width: 600px;
+    height: 75vh;
+}
+
+.AddScreen-List {
+    text-align: left;
+    list-style: none;
+}
+
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+    width: auto;
+}
+
+.react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
+    right: 140px;
+}
+
+.AddScreen-DatePicker, .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
+    width: 350px;
+    border: 1px solid #f60;
+    margin-bottom: 20px;
+}
