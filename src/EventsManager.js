@@ -50,7 +50,9 @@ class EventsManager extends Component {
 
   componentWillMount() {
     this.setState({
-      events: JSON.parse(localStorage.getItem('events') || '[]')
+      events: JSON.parse(localStorage.getItem('events') || '[]').map(
+        event => ({...event, start: new Date(event.start), end: new Date(event.end)})
+      )
     })
   }
 
@@ -70,7 +72,10 @@ class EventsManager extends Component {
       {
         menuItem: 'Calendar',
         render: () => <Tab.Pane attached={false}>
-          <Calendar events={this.state.events}/>
+          <Calendar
+            // events={this.state.events}
+                    searchPhrase={this.props.searchPhrase}
+                    events={events}/>
         </Tab.Pane>
       },
       {
