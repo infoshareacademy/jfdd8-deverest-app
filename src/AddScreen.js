@@ -33,7 +33,7 @@ class AddScreen extends React.Component {
     event.preventDefault();
     this.props.addEvent(
       this.state.partyInputValue,
-      this.state.startDate.toDate()
+      this.state.startDate
     );
     this.setState({
       taskInputValue: ''

@@ -33,7 +33,6 @@ class EventsManager extends Component {
   }
 //ma wylane czy tu jest jakis formularz/input
   addEvent = (title, start) => {
-
     this.setState({
       events: this.state.events.concat({
         id: this.state.events.map(
@@ -43,7 +42,8 @@ class EventsManager extends Component {
           0
         ) + 1,
         title: title,
-        start: start
+        start: start.toDate(),
+        end: start.toDate()
       })
     });
   };
@@ -69,7 +69,9 @@ class EventsManager extends Component {
     const panes = [
       {
         menuItem: 'Calendar',
-        render: () => <Tab.Pane attached={false}><Calendar events={this.state.events}/></Tab.Pane>
+        render: () => <Tab.Pane attached={false}>
+          <Calendar events={this.state.events}/>
+        </Tab.Pane>
       },
       {
         menuItem: 'List',
