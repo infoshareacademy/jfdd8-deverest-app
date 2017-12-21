@@ -73,8 +73,6 @@ class EventsManager extends Component {
         menuItem: 'Calendar',
         render: () => <Tab.Pane attached={false}>
           <Calendar
-            // events={this.state.events}
-                    searchPhrase={this.props.searchPhrase}
                     events={events}/>
         </Tab.Pane>
       },
@@ -83,11 +81,8 @@ class EventsManager extends Component {
         render: () => (
           <Tab.Pane
             attached={false}
-            // searchPhrase={this.props.searchPhrase}
-            // events={events}
           >
             <EventList
-              searchPhrase={this.props.searchPhrase}
               events={events}
             />
           </Tab.Pane>
