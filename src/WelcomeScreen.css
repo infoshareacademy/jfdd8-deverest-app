@@ -28,9 +28,14 @@
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     margin: 20px;
-    font-size: 20px;
+    font-size: 1.7rem;
     padding: 1.5rem 3rem 1.6rem;
     font-family: 'Montserrat', sans-serif;
+}
+
+.WelcomeScreen-button:focus {
+    border: none;
+    text-decoration: none;
 }
 
 .WelcomeScreen-GetStarted {
@@ -52,4 +57,14 @@
 
 a:hover {
     color: #f60;
+}
+
+.img-responsive {
+    width: 30%;
+    height: 30%;
+    position: relative;
+    text-align: center;
+    bottom: 10%;
+    color: rgba(255, 255, 255, 0.6);
+
 }
