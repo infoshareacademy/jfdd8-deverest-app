@@ -70,13 +70,6 @@ class EventsManager extends Component {
 
     const panes = [
       {
-        menuItem: 'Calendar',
-        render: () => <Tab.Pane attached={false}>
-          <Calendar
-                    events={events}/>
-        </Tab.Pane>
-      },
-      {
         menuItem: 'List',
         render: () => (
           <Tab.Pane
@@ -88,11 +81,18 @@ class EventsManager extends Component {
           </Tab.Pane>
         )
       },
+      {
+        menuItem: 'Calendar',
+        render: () => <Tab.Pane attached={false}>
+          <Calendar
+            events={events}/>
+        </Tab.Pane>
+      },
     ];
 
     return (
       <div>
-        <Modal trigger={<Button>Basic Modal</Button>} size='small'>
+        <Modal trigger={<Button>Add Event</Button>} size='small'>
           <Header icon='archive' content='Archive Old Messages'/>
           <Modal.Content>
             <AddScreen addEvent={this.addEvent}/>
