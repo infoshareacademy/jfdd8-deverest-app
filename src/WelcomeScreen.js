@@ -11,7 +11,7 @@ class WelcomeScreen extends Component {
         <button className="WelcomeScreen-button">Password</button>
         <button className="WelcomeScreen-GetStarted">Get started</button>
 
-        <a href="#">Create account</a>
+        <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
         </div>
       </div>
     )

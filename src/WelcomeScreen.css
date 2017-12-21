@@ -37,3 +37,12 @@
     margin: 20px;
     font-size: 20px;
 }
+
+.WelcomeScreen-CreateAccount {
+    margin: 20px 0 20px 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+a:hover {
+    color: #f60;
+}
