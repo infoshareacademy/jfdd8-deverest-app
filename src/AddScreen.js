@@ -38,6 +38,7 @@ class AddScreen extends React.Component {
     this.setState({
       taskInputValue: ''
     })
+    this.props.onAddDone()
   };
 
   addGuestsNames = () => {
