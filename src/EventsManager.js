@@ -7,30 +7,14 @@ import AddScreen from './AddScreen'
 
 class EventsManager extends Component {
   state = {
-    events: [
-      {
-        id: 1,
-        'title': 'Impreza u Rafała',
-        'start': new Date(2017, 11, 15),
-        'end': new Date(2017, 11, 17),
-        desc: 'Nauka Reacta',
-      },
-      {
-        id: 2,
-        'title': 'Impreza u Kuby',
-        'start': new Date(2017, 11, 19),
-        'end': new Date(2017, 11, 20),
-      },
-      {
-        id: 3,
-        'title': 'Impreza u Roberta',
-        'start': new Date(2017, 11, 22),
-        'end': new Date(2017, 11, 22),
-      },
-
-
-    ]
+    events: [],
+    modalOpen: false
   }
+
+  handleOpen = () => this.setState({ modalOpen: true })
+
+  handleClose = () => this.setState({ modalOpen: false })
+
 //ma wylane czy tu jest jakis formularz/input
   addEvent = (title, start) => {
     this.setState({
@@ -92,17 +76,18 @@ class EventsManager extends Component {
 
     return (
       <div>
-        <Modal trigger={<Button>Add Event</Button>} size='small'>
+        <Modal
+          open={this.state.modalOpen}
+          onClose={this.handleClose}
+          trigger={<Button onClick={this.handleOpen}>Add Event</Button>}
+          size='small'>
           <Header icon='archive' content='Archive Old Messages'/>
           <Modal.Content>
-            <AddScreen addEvent={this.addEvent}/>
+            <AddScreen addEvent={this.addEvent} onAddDone={this.handleClose}/>
           </Modal.Content>
           <Modal.Actions>
-            <Button basic color='red' inverted>
-              <Icon name='remove'/> No
-            </Button>
-            <Button color='green' inverted>
-              <Icon name='checkmark'/> Yes
+            <Button onClick={this.handleOpen} color='red' inverted>
+              <Icon name='checkmark'/> CLOSE
             </Button>
           </Modal.Actions>
         </Modal>
