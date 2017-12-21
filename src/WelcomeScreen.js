@@ -11,19 +11,18 @@ class WelcomeScreen extends Component {
           className="WelcomeScreen-button"
           type="text"
           name=""
-          placeholder=""
+          placeholder="Username"
         />
         <input
           className="WelcomeScreen-button"
           type="password"
           name=""
+          placeholder="Password"
         />
         <input
           className="WelcomeScreen-GetStarted"
           type="submit"
-          placeholder="Password"
         />
-        <label>Get started</label>
         <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
         </div>
       </div>
