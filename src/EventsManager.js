@@ -86,7 +86,7 @@ class EventsManager extends Component {
             <AddScreen addEvent={this.addEvent} onAddDone={this.handleClose}/>
           </Modal.Content>
           <Modal.Actions>
-            <Button onClick={this.handleOpen} color='red' inverted>
+            <Button onClick={this.handleClose} color='red' inverted>
               <Icon name='checkmark'/> CLOSE
             </Button>
           </Modal.Actions>
