@@ -10,15 +10,15 @@ class Details extends React.Component {
         <div className='main'>
 
           <div className='edit'>
-            <Button color='black'>Edit</Button>
+            <Button style={{borderRadius: '50px', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white'}}>Edit</Button>
           </div>
           <div className='data'>
             <h1>John's House Warming Party With Hookers</h1>
             <h2>Starts at: <span className='dateView'>{new Date().toLocaleString()}</span></h2>
             <div className='modal'>
-              <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='black'>Show Guests</Button>}>
-                <Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>
-                <Modal.Content image>
+              <Modal size='tiny' closeIcon closeOnDimmerClick={false} trigger={<Button style={{borderRadius: '50px', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white'}}>Show Guests</Button>}>
+                {/*<Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>*/}
+                <Modal.Content image style={{background: 'linear-gradient(to bottom, rgba(255,102,0,0.7), rgba(0,0,0,0.8))'}}>
                   <Modal.Description>
                     <div className='modal-body'>
                       <ul>

@@ -20,7 +20,7 @@ h1 {
     opacity: .6;
     color: white;
     border-radius: 10px;
-    width: 50%;
+    width: 55%;
     text-align: center;
     padding: 10px;
 }
@@ -52,7 +52,7 @@ ul li {
 .modal-body {
     display: flex;
     justify-content: center;
-    background-color: #f60;
+    /*background-color: #f60;*/
     border-radius: 10px;
 }
 
@@ -69,4 +69,7 @@ ul {
     opacity: .6;
     padding: 5px;
     border-radius: 10px;
+}
+.buttonEditSpan {
+    color: white;
 }
