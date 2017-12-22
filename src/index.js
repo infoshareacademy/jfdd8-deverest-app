@@ -15,6 +15,7 @@ import './index.css';
 import App from './App';
 import AddScreen from './AddScreen';
 import Details from './Details';
+import WelcomeScreen from './WelcomeScreen';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -27,6 +28,7 @@ ReactDOM.render(
         <Route exact path="/" component={App}/>
         <Route path="/addscreen" component={AddScreen}/>
         <Route path="/details" component={Details}/>
+        <Route path="/welcomescreen" component={WelcomeScreen}/>
       </Switch>
     </div>
 
