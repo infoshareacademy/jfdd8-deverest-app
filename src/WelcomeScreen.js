@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo from './Logo.png';
+// import Logo from './Logo.png';
 
 import './WelcomeScreen.css'
 
@@ -8,7 +8,7 @@ class WelcomeScreen extends Component {
     return (
       <div className="WelcomeScreen-container">
         <div className="WelcomeScreen-gradient">
-          <img src={Logo} alt="logo" className="img-responsive"/>
+          {/*<img src={Logo} alt="logo" className="img-responsive"/>*/}
           <input
           className="WelcomeScreen-button"
           type="text"

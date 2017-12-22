@@ -9,7 +9,7 @@
 }
 
 .WelcomeScreen-gradient {
-    background: linear-gradient(to bottom, rgba(163, 68, 0, 0.7), rgba(0,0,0,0.8));
+    background: linear-gradient(to bottom, rgba(10, 21, 63, 0.5), rgba(0,0,0,0.8));
     max-width: 800px;
     width: 100%;
     height: 100%;
@@ -34,8 +34,13 @@
 }
 
 .WelcomeScreen-button:focus {
-    border: none;
+outline: 0;
     text-decoration: none;
+}
+
+.WelcomeScreen-button::-webkit-input-placeholder {
+    color: white;
+    text-align: center;
 }
 
 .WelcomeScreen-GetStarted {
@@ -65,6 +70,4 @@ a:hover {
     position: relative;
     text-align: center;
     bottom: 10%;
-    color: rgba(255, 255, 255, 0.6);
-
 }
