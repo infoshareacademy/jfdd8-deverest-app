@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-// import Logo from './Logo.png';
+import Logo from './logo.png';
 
 import './WelcomeScreen.css'
 
 class WelcomeScreen extends Component {
   render() {
     return (
+      <div className="dark-background">
       <div className="WelcomeScreen-container">
         <div className="WelcomeScreen-gradient">
-          {/*<img src={Logo} alt="logo" className="img-responsive"/>*/}
+          <img src={Logo} alt="logo" className="img-responsive"/>
           <input
           className="WelcomeScreen-button"
           type="text"
@@ -27,6 +28,7 @@ class WelcomeScreen extends Component {
         />
         <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
         </div>
+      </div>
       </div>
     )
 
