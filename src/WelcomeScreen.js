@@ -1,36 +1,64 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import { Button, Input, Container, Header } from 'semantic-ui-react';
+
 import Logo from './logo.png';
 
 import './WelcomeScreen.css'
 
 class WelcomeScreen extends Component {
+  state = {
+    username: '',
+    email: '',
+    password: '',
+  };
+
+  onSubmit = async () => {
+    const response = await this.props.mutate({
+      variables: this.state,
+    });
+
+    console.log(response);
+  };
+
+  onChange = e => {
+    const { name, value } = e.target;
+    // name = "email";
+    this.setState({ [name]: value });
+  };
+
   render() {
+    const { username, email, password } = this.state;
     return (
       <div className="WelcomeScreen-container">
         <div className="WelcomeScreen-gradient">
-          <img src={Logo} alt="logo" className="img-responsive"/>
-          <input
-          className="WelcomeScreen-button"
-          type="text"
-          name=""
-          placeholder="Username"
-        />
-        <input
-          className="WelcomeScreen-button"
-          type="password"
-          name=""
-          placeholder="Password"
-        />
-        <input
-          className="WelcomeScreen-GetStarted"
-          type="submit"
-        />
-        <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
+          <img src={Logo} alt="logo" className="logo-responsive"/>
+          <Container text>
+            <Input
+              name="username"
+              onChange={this.onChange}
+              value={username}
+              placeholder="Username"
+              fluid
+            />
+            <br/>
+            <Input name="email" onChange={this.onChange} value={email} placeholder="Email" fluid />
+            <br/>
+            <Input
+              name="password"
+              onChange={this.onChange}
+              value={password}
+              type="password"
+              placeholder="Password"
+              fluid
+            />
+            <br/>
+            <Button onClick={this.onSubmit}>Submit</Button>
+            <br/><br/>
+          </Container>
+          <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
         </div>
       </div>
     )
-
   }
 }
-
 export default WelcomeScreen;
