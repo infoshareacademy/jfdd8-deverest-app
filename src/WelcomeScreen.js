@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import { Button, Input, Container, Icon } from 'semantic-ui-react';
+import { Button, Input, Container } from 'semantic-ui-react';
 
 import Logo from './logo.png';
-
 import './WelcomeScreen.css'
 
 class WelcomeScreen extends Component {
   state = {
     username: '',
-    email: '',
     password: '',
   };
 
@@ -22,12 +20,11 @@ class WelcomeScreen extends Component {
 
   onChange = e => {
     const { name, value } = e.target;
-    // name = "email";
     this.setState({ [name]: value });
   };
 
   render() {
-    const { username, email, password } = this.state;
+    const { username, password } = this.state;
     return (
       <div className="WelcomeScreen-container">
         <div className="WelcomeScreen-gradient">
@@ -50,6 +47,7 @@ class WelcomeScreen extends Component {
               placeholder="Password"
               fluid
             />
+            <br/>
             <br/>
             <Button onClick={this.onSubmit}>Get Started</Button>
             <br/><br/>
