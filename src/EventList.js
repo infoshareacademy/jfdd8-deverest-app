@@ -5,6 +5,8 @@ import {Tab, Modal, Button, Icon, Header} from 'semantic-ui-react'
 import Details from './Details'
 
 class EventList extends React.Component {
+
+
   render() {
     return (
       <div>
@@ -17,14 +19,11 @@ class EventList extends React.Component {
               <Modal trigger={<Button>Details</Button>} size='small'>
                 <Header icon='archive' content='Archive Old Messages'/>
                 <Modal.Content>
-                  <Details/>
+                  <Details event={event}/>
                 </Modal.Content>
                 <Modal.Actions>
-                  <Button basic color='red' inverted>
-                    <Icon name='remove'/> No
-                  </Button>
-                  <Button color='green' inverted>
-                    <Icon name='checkmark'/> Yes
+                  <Button onClick={this.handleClose} color='red' inverted>
+                    <Icon name='checkmark'/> CLOSE
                   </Button>
                 </Modal.Actions>
               </Modal>
