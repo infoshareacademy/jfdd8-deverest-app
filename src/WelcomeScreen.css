@@ -66,8 +66,7 @@ a:hover {
 
 .img-responsive {
     width: 30%;
-    height: 30%;
     position: relative;
     text-align: center;
-    bottom: 10%;
+    bottom: 0;
 }
