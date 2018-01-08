@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Input, Container, Header } from 'semantic-ui-react';
+import { Button, Input, Container, Icon } from 'semantic-ui-react';
 
 import Logo from './logo.png';
 
@@ -41,7 +41,6 @@ class WelcomeScreen extends Component {
               fluid
             />
             <br/>
-            <Input name="email" onChange={this.onChange} value={email} placeholder="Email" fluid />
             <br/>
             <Input
               name="password"
@@ -52,7 +51,7 @@ class WelcomeScreen extends Component {
               fluid
             />
             <br/>
-            <Button onClick={this.onSubmit}>Submit</Button>
+            <Button onClick={this.onSubmit}>Get Started</Button>
             <br/><br/>
           </Container>
           <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>

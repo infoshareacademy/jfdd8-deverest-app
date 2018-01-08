@@ -27,11 +27,49 @@
 }
 
 a:hover {
-    color: #f60;
+    color: rgba(210, 130, 183, 0.43);
 }
 
 .logo-responsive {
     width: 30%;
     position: relative;
+    text-align: center;
+    top: -5%;
+}
+
+.ui.input input {
+    background: rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #4f3646;
+    padding: 1.5em;
+    font-size: 1.5rem;
+    max-width: 70%!important;
+    text-align: center;
+    margin: auto;
+}
+
+.ui.input input:focus {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #684d60;
+    color: white;
+}
+
+.ui.input input:active {
+    border: 1px solid #4f3646;
+    padding: 1.5em;
+}
+
+.ui.button {
+    background: #824950 none;
+    color: rgb(11, 9, 7);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+}
+
+.ui.text.container {
     text-align: center;
 }
