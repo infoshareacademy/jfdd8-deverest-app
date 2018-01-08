@@ -13,8 +13,10 @@ class Details extends React.Component {
             <Button color='black'>Edit</Button>
           </div>
           <div className='data'>
-            <h1>John's House Warming Party With Hookers</h1>
-            <h2>Starts at: <span className='dateView'>{new Date().toLocaleString()}</span></h2>
+            <h1>{this.props.event.title}</h1>
+            <h2>Starts at: <span className='dateView'>{
+              this.props.event.start.toLocaleString()
+            }</span></h2>
             <div className='modal'>
               <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='black'>Show Guests</Button>}>
                 <Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>
