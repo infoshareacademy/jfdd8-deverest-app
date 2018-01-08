@@ -19,7 +19,7 @@ class EventList extends React.Component {
               <Modal trigger={<Button>Details</Button>} size='small'>
                 <Header icon='archive' content='Archive Old Messages'/>
                 <Modal.Content>
-                  <Details/>
+                  <Details event={event}/>
                 </Modal.Content>
                 <Modal.Actions>
                   <Button onClick={this.handleClose} color='red' inverted>
