@@ -6,6 +6,7 @@ import './WelcomeScreen.css'
 class WelcomeScreen extends Component {
   render() {
     return (
+      <div className="dark-background">
       <div className="WelcomeScreen-container">
         <div className="WelcomeScreen-gradient">
           <img src={Logo} alt="logo" className="img-responsive"/>
@@ -27,6 +28,7 @@ class WelcomeScreen extends Component {
         />
         <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
         </div>
+      </div>
       </div>
     )
 
