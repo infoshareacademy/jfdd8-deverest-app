@@ -20,20 +20,24 @@ import WelcomeScreen from './WelcomeScreen';
 
 import registerServiceWorker from './registerServiceWorker';
 import Auth from "./Auth/Auth";
+import SignOut from "./Auth/SignOut";
 
 setupFirebase();
 
 ReactDOM.render(
   <Router>
     <div>
-      <Auth>
+
           <Switch>
+           <Auth>
             <Route exact path="/" component={App}/>
             <Route path="/addscreen" component={AddScreen}/>
             <Route path="/details" component={Details}/>
             <Route path="/welcomescreen" component={WelcomeScreen}/>
+               <SignOut/>
+           </Auth>
           </Switch>
-      </Auth>
+
     </div>
 
   </Router>,
