@@ -27,7 +27,7 @@ class App extends Component {
         <SearchBar
           onSearch={this.onSearch}/>
         <Button basic
-          onClick={this.handleClearTerm}>X</Button>
+          onClick={this.handleClearTerm}>clear search</Button>
         {/*<Button basic color='blue' as={Link} to={'/addscreen'}>Add Event</Button>*/}
           <EventsManager
             searchPhrase={this.state.searchPhrase}

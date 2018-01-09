@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Button } from 'semantic-ui-react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
-import {Tab, Modal, Button, Icon, Header} from 'semantic-ui-react'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
+import {Tab, Modal, Button, Icon, Header, List, Image} from 'semantic-ui-react'
 import Details from './Details'
 
 class EventList extends React.Component {
@@ -10,26 +10,31 @@ class EventList extends React.Component {
   render() {
     return (
       <div>
-      <ul>
-        {this.props.events.map(
-          event=>
-            <div key={event.id}>
-              <li>{event.title}</li>
-              {/*<Button basic color='teal' as={Link} to={'/details'}>Details</Button>*/}
-              <Modal trigger={<Button>Details</Button>} size='small'>
-                <Header icon='archive' content='Archive Old Messages'/>
-                <Modal.Content>
-                  <Details event={event}/>
-                </Modal.Content>
-                <Modal.Actions>
-                  <Button onClick={this.handleClose} color='red' inverted>
-                    <Icon name='checkmark'/> CLOSE
-                  </Button>
-                </Modal.Actions>
-              </Modal>
-            </div>
-        )}
-      </ul>
+        <List divided verticalAlign='middle'>
+          <List.Item>
+            {this.props.events.map(
+              event =>
+                <List.Content
+                key={event.id}>
+                  <Image avatar src='/assets/images/avatar/small/lena.png' floated='left'/>
+                  <li>{event.title}</li>
+                  {/*<Button basic color='teal' as={Link} to={'/details'}>Details</Button>*/}
+                  <Modal trigger={<List.Content floated='right'>
+                    <Button>Details</Button>
+                  </List.Content>} size='large'>
+                    <Modal.Content>
+                      <Details event={event}/>
+                    </Modal.Content>
+                    <Modal.Actions>
+                      <Button onClick={this.handleClose} color='red' inverted>
+                        <Icon name='checkmark'/> CLOSE
+                      </Button>
+                    </Modal.Actions>
+                  </Modal>
+                </List.Content>
+            )}
+          </List.Item>
+        </List>
       </div>
     )
   }
