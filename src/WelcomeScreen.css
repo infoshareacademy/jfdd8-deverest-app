@@ -60,7 +60,7 @@ a:hover {
     color: white;
 }
 
-.ui.button {
+.WelcomeScreen-container .ui.button {
     background: url('button.jpg') no-repeat center center;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -71,7 +71,7 @@ a:hover {
     margin: auto;
 }
 
-.ui.button:hover {
+.WelcomeScreen-container .ui.button:hover {
     background: url('button.jpg') no-repeat left center;
     color: #fff;
 }

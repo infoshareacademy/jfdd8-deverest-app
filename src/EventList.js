@@ -16,16 +16,15 @@ class EventList extends React.Component {
             <div key={event.id}>
               <li>{event.title}</li>
               {/*<Button basic color='teal' as={Link} to={'/details'}>Details</Button>*/}
-              <Modal trigger={<Button>Details</Button>} size='small'>
-                <Header icon='archive' content='Archive Old Messages'/>
+              <Modal closeIcon closeOnDimmerClick={false} trigger={<Button>Details</Button>} size='small'>
                 <Modal.Content>
                   <Details event={event}/>
                 </Modal.Content>
-                <Modal.Actions>
-                  <Button onClick={this.handleClose} color='red' inverted>
-                    <Icon name='checkmark'/> CLOSE
-                  </Button>
-                </Modal.Actions>
+                {/*<Modal.Actions>*/}
+                  {/*<Button onClick={this.handleClose} color='red' inverted>*/}
+                    {/*<Icon name='checkmark'/> CLOSE*/}
+                  {/*</Button>*/}
+                {/*</Modal.Actions>*/}
               </Modal>
             </div>
         )}
