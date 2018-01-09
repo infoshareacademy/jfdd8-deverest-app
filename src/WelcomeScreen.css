@@ -1,75 +1,82 @@
 .WelcomeScreen-container {
-    max-width: 800px;
+    max-width: 100%;
     height: 100vh;
     margin: auto;
     padding: auto;
-    background: url('party_night.jpg') no-repeat center center;
+    background: #111111 url('beach.jpg') no-repeat center center;
     font-family: 'Montserrat', sans-serif;
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .WelcomeScreen-gradient {
-    background: linear-gradient(to bottom, rgba(10, 21, 63, 0.5), rgba(0,0,0,0.8));
+    background-color: rgba(0,0,0, 0.7);
     max-width: 800px;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.WelcomeScreen-button {
-    max-width: 400px;
-    width: 100%;
-    height: 75px;
-    border-radius: 50px;
-    border: 0 solid white;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    margin: 20px;
-    font-size: 1.5rem;
-    padding: 1.5rem 3rem 1.6rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.WelcomeScreen-button:focus {
-outline: 0;
-    text-decoration: none;
-}
-
-.WelcomeScreen-button::-webkit-input-placeholder {
-    color: white;
-    text-align: center;
-}
-
-.WelcomeScreen-GetStarted {
-    max-width: 400px;
-    width: 100%;
-    height: 75px;
-    border-radius: 50px;
-    border: 0 solid white;
-    background-color: rgb(255, 102, 0);
-    color: white;
-    margin: 20px;
-    font-size: 20px;
-}
-
 .WelcomeScreen-CreateAccount {
-    margin: 20px 0 20px 0;
+    margin-top: 20px;
     color: rgba(255, 255, 255, 0.6);
 }
 
 a:hover {
-    color: #f60;
+    color: #a2636a;
 }
 
-.img-responsive {
+.logo-responsive {
     width: 30%;
     position: relative;
     text-align: center;
+    top: -5%;
 }
 
-.dark-background {
-    background-color: #111111;
+.ui.input input {
+    background: rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid white;
+    padding: 1.5em;
+    font-size: 1.5rem;
+    max-width: 70%!important;
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+}
+
+.ui.input input:focus {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid ;
+    color: white;
+}
+
+.ui.input input:active {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.ui.button {
+    background: url('button.jpg') no-repeat center center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    width: 70%;
+    display: inline-block;
+    margin: auto;
+}
+
+.ui.button:hover {
+    background: url('button.jpg') no-repeat left center;
+    color: #fff;
+}
+
+.ui.text.container {
+    margin-top: 20px;
+    text-align: center;
 }
