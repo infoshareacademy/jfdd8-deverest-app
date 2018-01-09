@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import setupFirebase from './setupFirebase'
 
 import {
   BrowserRouter as Router,
@@ -19,7 +20,7 @@ import WelcomeScreen from './WelcomeScreen';
 
 import registerServiceWorker from './registerServiceWorker';
 
-
+setupFirebase();
 ReactDOM.render(
   <Router>
     <div>
