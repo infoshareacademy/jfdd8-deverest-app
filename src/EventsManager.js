@@ -83,14 +83,7 @@ class EventsManager extends Component {
           onClose={this.handleClose}
           trigger={<Button onClick={this.handleOpen}>Add Event</Button>}
           size='small'>
-          <Modal.Content>
             <AddScreen addEvent={this.addEvent} onAddDone={this.handleClose}/>
-          </Modal.Content>
-          {/*<Modal.Actions>*/}
-            {/*<Button onClick={this.handleClose} color='red' inverted>*/}
-              {/*<Icon name='checkmark'/> CLOSE*/}
-            {/*</Button>*/}
-          {/*</Modal.Actions>*/}
         </Modal>
         <Tab menu={{secondary: true}} panes={panes}/>
       </div>

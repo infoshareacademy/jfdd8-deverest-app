@@ -60,8 +60,8 @@ ul {
 
 .main {
     height: 100vh;
-    /*background: url("./button.jpg") no-repeat left center;*/
-    background-color: rgba(0, 0, 0, 0.7);
+    background: url("./button.jpg") no-repeat left center;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
 }
 .dateView {
     color: white;

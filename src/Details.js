@@ -19,7 +19,6 @@ class Details extends React.Component {
             }</span></h2>
             <div className='modal'>
               <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='black'>Show Guests</Button>}>
-                {/*<Modal.Content image>*/}
                   <Modal.Description>
                     <div className='modal-body'>
                       <ul>
@@ -34,7 +33,6 @@ class Details extends React.Component {
                       </ul>
                     </div>
                   </Modal.Description>
-                {/*</Modal.Content>*/}
               </Modal>
             </div>
           </div>
