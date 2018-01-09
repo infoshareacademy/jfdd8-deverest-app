@@ -82,9 +82,9 @@ class EventsManager extends Component {
           trigger={<Button onClick={this.handleOpen}>Add Event</Button>}
           size='small'>
           <Header icon='archive' content='Archive Old Messages'/>
-          <Modal.Content>
+
             <AddScreen addEvent={this.addEvent} onAddDone={this.handleClose}/>
-          </Modal.Content>
+
           <Modal.Actions>
             <Button onClick={this.handleClose} color='red' inverted>
               <Icon name='checkmark'/> CLOSE

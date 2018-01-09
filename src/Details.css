@@ -36,8 +36,8 @@ h2 {
 #modal-header-span {
     display: flex;
     justify-content: center;
-    background-color: black;
-    color: white;
+    /*background-color: black;*/
+    color: black;
     border-radius: 10px;
 }
 
@@ -50,8 +50,8 @@ ul li {
 .modal-body {
     display: flex;
     justify-content: center;
-    background-color: #f60;
-    border-radius: 10px;
+    background: url("./button.jpg") no-repeat left center;
+    /*border-radius: 10px;*/
 }
 
 ul {
