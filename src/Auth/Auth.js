@@ -6,7 +6,8 @@ import SignOut from './SignOut';
 
 class Auth extends Component {
     state = {
-        user: null
+        user: null,
+        showSignInForm: true
     };
 
     componentDidMount() {
@@ -15,6 +16,7 @@ class Auth extends Component {
         )
     }
 
+    toggleView = () => this.setState({ showSignInForm: !this.state.showSignInForm })
 
 
     render() {
@@ -23,7 +25,10 @@ class Auth extends Component {
                 ? this.props.children
                 : (
                     <div>
-                        <SignInForm/>
+                      { this.state.showSignInForm ?
+                        <SignInForm toggleView={this.toggleView}/> :
+                        <SignUpForm toggleView={this.toggleView}/>
+                      }
 
                     </div>
                 )

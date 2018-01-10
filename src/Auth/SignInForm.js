@@ -57,7 +57,7 @@ class SignInForm extends Component {
                             <br/><br/>
                         </form>
                     </Container>
-                    <a href="#" className="WelcomeScreen-CreateAccount">Create account</a>
+                    <a className="WelcomeScreen-CreateAccount" onClick={this.props.toggleView}>Create account</a>
                 </div>
             </div>
         )
