@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import { Button, Input, Container } from 'semantic-ui-react';
 
-import Logo from '../logo.png';
-import '../WelcomeScreen.css'
+import Logo from '../picture/logo.png';
+import './WelcomeScreen.css'
 
 class SignInForm extends Component {
 
