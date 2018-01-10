@@ -1,6 +1,7 @@
 body {
   background: url('picture/21.jpg') no-repeat left center;
   font-family: 'Montserrat', sans-serif;
+  max-height: 100vh;
 }
 
 #root .ui.tab.active, .ui.tab.open {
@@ -13,11 +14,6 @@ body {
   max-width: 700px;
   height: 100vh;
   margin: 0 auto;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .App-header {
@@ -33,11 +29,6 @@ body {
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 #root .rbc-event {
@@ -60,5 +51,13 @@ body {
 }
 
 .rbc-toolbar button:active {
-   background-color: rgba(0,0,0, 0.4);
+  background-color: rgba(0,0,0, 0.4);
+}
+
+#root .Search-button {
+  display: inline-block;
+}
+
+#root .ui.icon.input input {
+  padding-right: 15em!important;
 }

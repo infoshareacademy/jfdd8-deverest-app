@@ -1,0 +1,10 @@
+button.signOut-button {
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    padding: 1em;
+    cursor: pointer;
+}
