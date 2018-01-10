@@ -18,9 +18,7 @@ class Details extends React.Component {
               this.props.event.start.toLocaleString()
             }</span></h2>
             <div className='modal'>
-              <Modal closeIcon closeOnDimmerClick={false} trigger={<Button color='black'>Show Guests</Button>}>
-                <Modal.Header><span id='modal-header-span'>Guest List</span></Modal.Header>
-                <Modal.Content image>
+              <Modal size='tiny' closeIcon closeOnDimmerClick={false} trigger={<Button color='black'>Show Guests</Button>}>
                   <Modal.Description>
                     <div className='modal-body'>
                       <ul>
@@ -35,7 +33,6 @@ class Details extends React.Component {
                       </ul>
                     </div>
                   </Modal.Description>
-                </Modal.Content>
               </Modal>
             </div>
           </div>
