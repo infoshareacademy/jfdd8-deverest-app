@@ -3,7 +3,7 @@
     height: 100vh;
     margin: auto;
     padding: auto;
-    background: #111111 url('beach.jpg') no-repeat center center;
+    background: #111111 url('../picture/beach.jpg') no-repeat center center;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@ a:hover {
 }
 
 .WelcomeScreen-container .ui.button {
-    background: url('./back/21.jpg') no-repeat left center;
+    background: url('../picture/21.jpg') no-repeat left center;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -72,7 +72,7 @@ a:hover {
 }
 
 .WelcomeScreen-container .ui.button:hover {
-    background: url('button.jpg') no-repeat left center;
+    background: url('../picture/21.jpg') no-repeat left center;
     color: #fff;
 }
 

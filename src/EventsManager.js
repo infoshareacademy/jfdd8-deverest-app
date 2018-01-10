@@ -33,7 +33,7 @@ class EventsManager extends Component {
     //     end: start.toDate()
     //   })
     // });
-    const uid = 'zupa'//firebase.auth().currentUser.uid;
+    const uid = firebase.auth().currentUser.uid;
     firebase.database().ref('/events/' + uid).push({
       title: title,
       start: start.format(),
@@ -47,7 +47,7 @@ class EventsManager extends Component {
     //     event => ({...event, start: new Date(event.start), end: new Date(event.end)})
     //   )
     // })
-    const uid = 'zupa'//firebase.auth().currentUser.uid;
+    const uid = firebase.auth().currentUser.uid;
     firebase.database().ref('/events/' + uid).on(
       'value',
       snapshot => {
