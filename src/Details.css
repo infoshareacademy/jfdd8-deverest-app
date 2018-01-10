@@ -50,7 +50,7 @@ ul li {
 .modal-body {
     display: flex;
     justify-content: center;
-    background: url("./button.jpg") no-repeat left center;
+    /*background: url("./button.jpg") no-repeat left center;*/
 }
 
 ul {
@@ -59,7 +59,7 @@ ul {
 
 .main {
     height: 100vh;
-    background: url("./button.jpg") no-repeat left center;
+    /*background: url("./button.jpg") no-repeat left center;*/
     /*background-color: rgba(0, 0, 0, 0.7);*/
 }
 .dateView {
