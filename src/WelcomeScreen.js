@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Button, Input, Container } from 'semantic-ui-react';
 
-import Logo from './logo.png';
+// import Logo from './logo.png';
 import './WelcomeScreen.css'
 
 class WelcomeScreen extends Component {
@@ -28,7 +28,7 @@ class WelcomeScreen extends Component {
     return (
       <div className="WelcomeScreen-container">
         <div className="WelcomeScreen-gradient">
-          <img src={Logo} alt="logo" className="logo-responsive"/>
+          {/*<img src={Logo} alt="logo" className="logo-responsive"/>*/}
           <Container text>
             <Input
               name="username"
