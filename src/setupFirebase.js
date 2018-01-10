@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 const config = {
-  apiKey: "AIzaSyAdreUZAsQfiXrokHUufi2dZAR5uq79eDE",
-  authDomain: "awesome-project-41024.firebaseapp.com",
-  databaseURL: "https://awesome-project-41024.firebaseio.com",
-  projectId: "awesome-project-41024",
-  storageBucket: "awesome-project-41024.appspot.com",
-  messagingSenderId: "284034646403"
+  apiKey: "AIzaSyDeHXreyUZL4Oy09_LCwD6AtAo12o-Kvjo",
+  authDomain: "awesome-project-dev.firebaseapp.com",
+  databaseURL: "https://awesome-project-dev.firebaseio.com",
+  projectId: "awesome-project-dev",
+  storageBucket: "",
+  messagingSenderId: "101058552026"
 };
 
 export default () => {
