@@ -16,9 +16,11 @@ import './index.css';
 import App from './App';
 import AddScreen from './AddScreen';
 import Details from './Details';
-import WelcomeScreen from './WelcomeScreen';
+
 
 import registerServiceWorker from './registerServiceWorker';
+import Auth from "./Auth/Auth";
+import SignOut from "./Auth/SignOut";
 
 setupFirebase();
 
@@ -26,12 +28,16 @@ ReactDOM.render(
   <Router>
     <div>
 
-      <Switch>
-        <Route exact path="/" component={App}/>
-        <Route path="/addscreen" component={AddScreen}/>
-        <Route path="/details" component={Details}/>
-        <Route path="/welcomescreen" component={WelcomeScreen}/>
-      </Switch>
+          <Switch>
+           <Auth>
+            <Route exact path="/" component={App}/>
+            <Route path="/addscreen" component={AddScreen}/>
+            <Route path="/details" component={Details}/>
+
+               <SignOut/>
+           </Auth>
+          </Switch>
+
     </div>
 
   </Router>,

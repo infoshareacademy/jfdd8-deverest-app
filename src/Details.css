@@ -36,8 +36,8 @@ h2 {
 #modal-header-span {
     display: flex;
     justify-content: center;
-    background-color: black;
-    color: white;
+    /*background-color: black;*/
+    color: black;
     border-radius: 10px;
 }
 
@@ -50,8 +50,7 @@ ul li {
 .modal-body {
     display: flex;
     justify-content: center;
-    background-color: #f60;
-    border-radius: 10px;
+    /*background: url("./button.jpg") no-repeat left center;*/
 }
 
 ul {
@@ -60,7 +59,8 @@ ul {
 
 .main {
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(255,102,0,0.7), rgba(0,0,0,0.8));
+    /*background: url("./button.jpg") no-repeat left center;*/
+    /*background-color: rgba(0, 0, 0, 0.7);*/
 }
 .dateView {
     color: white;

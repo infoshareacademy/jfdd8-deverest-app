@@ -8,18 +8,18 @@ import { BrowserRouter as Router, Link } from 'react-router-dom'
 class App extends Component {
   state={
     searchPhrase: ''
-  }
+  };
 
   onSearch = (text) => {
     this.setState({
       searchPhrase: text
     })
-  }
+  };
   handleClearTerm = () => {
     this.setState({
       searchPhrase: ''
     })
-  }
+  };
 
   render() {
     return (
