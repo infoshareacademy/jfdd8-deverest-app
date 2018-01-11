@@ -88,6 +88,7 @@ class AddScreen extends React.Component {
     return (
       /* Adding party title and guests number */
       <div className="AddScreen-container">
+        <div className="dark-theme">
         <Form onSubmit={this.handleSubmit}>
           <label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
           <Input className="AddScreen-PartyInput"
@@ -154,7 +155,9 @@ class AddScreen extends React.Component {
           <Button color="black"
             type='submit'>Save
           </Button>
+          <br/><br/>
         </Form>
+      </div>
       </div>
     )
   }

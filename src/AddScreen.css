@@ -1,12 +1,19 @@
 .AddScreen-container {
-    background: linear-gradient(to bottom, rgba(255,102,0,0.7), rgba(0,0,0,0.8));
+    background: url('picture/beach_dark.jpg') no-repeat bottom right;
     display: flex;
     justify-content: center;
     color: #fff;
     text-align: center;
-    height: 100vh;
+    height: 50%;
     padding-top: 10%;
     font-family: 'Montserrat', sans-serif;
+}
+
+.AddScreen-container {
+    background-color: rgba(0,0,0, 0.9);
+    max-width: 800px;
+    width: 100%;
+    height: auto;
 }
 
 .AddScreen-PartyName {
@@ -36,6 +43,50 @@
     width: 350px;
     border: 1px solid #f60;
     margin-bottom: 20px;
+}
+
+.AddScreen-container .ui.input input {
+    background: rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid white;
+    padding: 0.9em;
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+}
+
+.AddScreen-container .ui.input input:focus {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid ;
+    color: white;
+}
+
+.AddScreen-container .ui.input input:active {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.AddScreen-container .ui.button {
+    background: url('./picture/21.jpg') no-repeat left center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    width: 70%;
+    display: inline-block;
+    margin: auto;
+}
+
+.AddScreen-container .ui.button:hover {
+    background: url('./picture/21.jpg') no-repeat left center;
+    color: #fff;
+}
+
+.AddScreen-container .ui.text.container {
+    margin-top: 20px;
+    text-align: center;
 }
 
 
