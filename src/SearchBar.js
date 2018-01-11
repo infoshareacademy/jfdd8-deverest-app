@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input } from 'semantic-ui-react'
+import { Input, Button } from 'semantic-ui-react'
 
 class SearchBar extends React.Component {
   state ={
@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
             circular: true,
             link: true,
             onClick: this.search}}
-          placeholder='Search...'
+          placeholder='Type to search...'
           onChange={this.handleTermChange}
         />
       </div>

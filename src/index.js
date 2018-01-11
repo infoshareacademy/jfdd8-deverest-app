@@ -27,6 +27,7 @@ setupFirebase();
 ReactDOM.render(
   <Router>
     <div>
+      <SignOut/>
 
           <Switch>
            <Auth>
@@ -34,7 +35,6 @@ ReactDOM.render(
             <Route path="/addscreen" component={AddScreen}/>
             <Route path="/details" component={Details}/>
 
-               <SignOut/>
            </Auth>
           </Switch>
 

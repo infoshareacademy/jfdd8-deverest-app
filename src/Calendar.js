@@ -13,7 +13,8 @@ class Calendar extends Component {
             {...this.props}
             events={this.props.events}
             defaultDate={new Date()}
-            />
+            views={['month', 'day']}
+              />
           </div>
         )
 

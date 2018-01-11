@@ -39,7 +39,7 @@ class SignInForm extends Component {
                             <Input
                                 name="email"
                                 onChange={this.handleChange}
-                                placeholder="E-mail"
+                                placeholder="Your e-mail"
                                 fluid
                             />
                             <br/>
@@ -48,7 +48,7 @@ class SignInForm extends Component {
                                 name="password"
                                 onChange={this.handleChange}
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Your password"
                                 fluid
                             />
                             <br/>

@@ -38,7 +38,7 @@ class SignUpForm extends Component {
                             <Input
                                 name="email"
                                 onChange={this.handleChange}
-                                placeholder="E-mail"
+                                placeholder="E-mail Address"
                                 fluid
                             />
                             <br/>
@@ -47,12 +47,12 @@ class SignUpForm extends Component {
                                 name="password"
                                 onChange={this.handleChange}
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Set A Password"
                                 fluid
                             />
                             <br/>
                             <br/>
-                            <Button>Register</Button>
+                            <Button>Sign Up</Button>
                             <br/><br/>
                         </form>
                     </Container>
