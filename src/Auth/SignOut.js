@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Button, Icon} from 'semantic-ui-react';
 
 import './SignOut.css'
 import firebase from 'firebase'
@@ -20,9 +21,12 @@ class SignOut extends Component {
             <div>
                 {
                     this.state.user ?
-                        <button className='signOut-button' onClick={() => firebase.auth().signOut()}>
-                          SIGN OUT
-                        </button> : null
+                      <Button className='signOut-button' onClick={() => firebase.auth().signOut()} animated='vertical'>
+                        <Button.Content hidden>Thank you!</Button.Content>
+                        <Button.Content visible>
+                            Sign Out
+                        </Button.Content>
+                      </Button> : null
                 }
             </div>
 
