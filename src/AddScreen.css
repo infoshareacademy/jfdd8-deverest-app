@@ -41,8 +41,15 @@
 
 .AddScreen-DatePicker, .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
     width: 350px;
-    border: 1px solid #f60;
-    margin-bottom: 20px;
+    background: rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid white;
+    padding: 0.9em;
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
 }
 
 .AddScreen-container .ui.input input {
@@ -72,9 +79,9 @@
     background: url('./picture/21.jpg') no-repeat left center;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    padding: 1.5em;
-    width: 70%;
+    font-size: 1em;
+    padding: 0.9em;
+    width: 100%;
     display: inline-block;
     margin: auto;
 }
@@ -88,5 +95,11 @@
     margin-top: 20px;
     text-align: center;
 }
+
+.ui.modal>.icon:first-child+*, .ui.modal>:first-child:not(.icon) .ui.modal>:last-child {
+    border-radius: 0;
+}
+
+
 
 
