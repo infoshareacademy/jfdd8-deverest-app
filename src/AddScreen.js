@@ -14,26 +14,12 @@ class AddScreen extends React.Component {
     startDate: moment()
   };
 
-  // addEvent = () => {
-  //   this.setState({
-  //     events: this.state.events.concat({
-  //       id: this.state.events.map(
-  //         item => item.id
-  //       ).reduce(
-  //         (biggest, next) => Math.max(biggest, next),
-  //         0
-  //       ) + 1,
-  //       content: this.state.partyInputValue
-  //     }),
-  //     partyInputValue: '',
-  //   });
-  // };
-
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addEvent(
       this.state.partyInputValue,
-      this.state.startDate
+      this.state.startDate,
+      this.state.guestsNames
     );
     this.setState({
       taskInputValue: ''
@@ -50,7 +36,7 @@ class AddScreen extends React.Component {
           (biggest, next) => Math.max(biggest, next),
           0
         ) + 1,
-        content: this.state.namesInputValue
+        guestName: this.state.namesInputValue
       }),
       namesInputValue: ''
     });
@@ -89,7 +75,7 @@ class AddScreen extends React.Component {
       /* Adding party title and guests number */
       <div className="AddScreen-container">
         <Form onSubmit={this.handleSubmit}>
-          <label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
+          <div><label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
           <Input className="AddScreen-PartyInput"
                  size='large'
                  value={this.state.partyInputValue}
@@ -97,20 +83,9 @@ class AddScreen extends React.Component {
                  placeholder='Name your party here...'
           />
 
-          <ul>
-            {
-              this.state.events.map(
-                item => (
-                  <li key={item.id}
-                      className="AddScreen-List">
-                    {item.content}
-                  </li>
-                )
-              )
-            }
-          </ul>
 
-          <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
+          </div>
+          <div><label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
           <DatePicker className="AddScreen-DatePicker"
             selected={this.state.startDate}
             onChange={this.handleTimeChange}
@@ -119,8 +94,8 @@ class AddScreen extends React.Component {
             timeIntervals={15}
             dateFormat="LLL"
           /><br/>
-
-          <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
+          </div>
+        <div><label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
           <Input className="AddScreen-GuestsInput"
             size='large'
             value={this.state.namesInputValue}
@@ -132,14 +107,14 @@ class AddScreen extends React.Component {
                  type="button"
                  value="+"
           />
-
+        </div>
           <ul>
             {
               this.state.guestsNames.map(
                 task => (
                   <li key={task.id}
                   className="AddScreen-List">
-                    {task.content}
+                    {task.guestName}
                     <button
                            data-task-id={task.id}
                            onClick={this.handleDeleteClick}
