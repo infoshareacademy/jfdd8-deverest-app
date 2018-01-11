@@ -50,7 +50,7 @@ ul li {
 .modal-body {
     display: flex;
     justify-content: center;
-    /*background: url("./button.jpg") no-repeat left center;*/
+    background: url("./picture/21.jpg") no-repeat left center;
 }
 
 ul {
@@ -59,9 +59,13 @@ ul {
 
 .main {
     height: 100vh;
-    /*background: url("./button.jpg") no-repeat left center;*/
-    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background: url("./picture/21.jpg") no-repeat left center;
 }
+
+.main :after :before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .dateView {
     color: white;
     background-color: black;
@@ -69,3 +73,4 @@ ul {
     padding: 5px;
     border-radius: 10px;
 }
+

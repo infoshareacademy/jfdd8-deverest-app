@@ -23,12 +23,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App"><br/>
+
         <SearchBar
-          onSearch={this.onSearch}/>
-        <Button basic
-          onClick={this.handleClearTerm}>clear search</Button>
-        {/*<Button basic color='blue' as={Link} to={'/addscreen'}>Add Event</Button>*/}
+          onSearch={this.onSearch} />
+        <Button className="Search-button"
+          onClick={this.handleClearTerm}>Clear search</Button>
           <EventsManager
             searchPhrase={this.state.searchPhrase}
           />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import './SignOut.css'
 import firebase from 'firebase'
 
 class SignOut extends Component {
@@ -19,8 +20,8 @@ class SignOut extends Component {
             <div>
                 {
                     this.state.user ?
-                        <button onClick={() => firebase.auth().signOut()}>
-                          Sign out
+                        <button className='signOut-button' onClick={() => firebase.auth().signOut()}>
+                          SIGN OUT
                         </button> : null
                 }
             </div>
