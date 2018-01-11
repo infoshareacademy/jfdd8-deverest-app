@@ -46,12 +46,14 @@ class EventList extends React.Component {
                   <Details event={event}/>
               </Modal>
               <Modal closeIcon closeOnDimmerClick={false} trigger={ <Button
+
                   data-task-id={event.id}
                   onClick={this.handleRemoveClick}
+                  icon='trash'
+
                 >
-                  DELETE
-                </Button>} size='small'>
-                  <Details event={event}/>
+
+                </Button>} size='small'><Details event={event}/>
               </Modal>
 
             </div>
