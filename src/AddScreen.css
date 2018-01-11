@@ -18,7 +18,7 @@
 
 .AddScreen-PartyName {
     font-size: 26px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .AddScreen-InnerContainer {
@@ -36,7 +36,7 @@
 }
 
 .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
-    right: 140px;
+    right: 100px;
 }
 
 .AddScreen-DatePicker, .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
@@ -51,6 +51,39 @@
     margin: auto;
     color: #ffffff;
 }
+
+.react-datepicker__day--selected {
+    background-color: #905365;
+}
+
+input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
+    background-color: rgba(0,0,0,0.5)!important;
+    color: white!important;
+    border-color: white!important;
+}
+
+
+.react-datepicker__day--selected:focus {
+    background-color: #af6d7f;
+}
+
+.react-datepicker__month-container {
+    background: rgba(0,0,0,0.8);
+}
+
+.react-datepicker__header, .react-datepicker__header--time {
+    background: rgba(0,0,0,0.9);
+}
+
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list {
+    background: rgba(0,0,0,0.8);
+}
+
+
+.react-datepicker__current-month, .react-datepicker-time__header {
+    color: white;
+}
+
 
 .AddScreen-container .ui.input input {
     background: rgba(0,0,0,0.8);
