@@ -16,13 +16,14 @@ class Details extends React.Component {
           <h2>Starts at: <span className='dateView'>
               {this.props.event.start.toLocaleString()}
             </span></h2>
-          <div className='modal'>
+          {this.props.event.guestList &&
+            <div className='modal'>
             <Modal size='tiny' closeIcon closeOnDimmerClick={false}
                    trigger={<Button color='black'>Show Guests</Button>}>
               <Modal.Description>
                 <div className='modal-body'>
                   <ul>
-                    {Object.entries(this.props.event.guestList).map(
+                    {Object.entries(this.props.event.guestList || {}).map(
                       ([id, value]) => ({
                         id, ...value
                       })
@@ -35,7 +36,7 @@ class Details extends React.Component {
                 </div>
               </Modal.Description>
             </Modal>
-          </div>
+          </div>}
         </div>
 
       </div>
