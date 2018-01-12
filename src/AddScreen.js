@@ -9,7 +9,6 @@ class AddScreen extends React.Component {
   state = {
     partyInputValue: '',
     namesInputValue: '',
-    events: [],
     guestsNames: [],
     startDate: moment()
   };
@@ -75,79 +74,68 @@ class AddScreen extends React.Component {
       /* Adding party title and guests number */
       <div className="AddScreen-container">
         <div className="dark-theme">
-        <Form onSubmit={this.handleSubmit}>
-          <div><label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
-          <Input className="AddScreen-PartyInput"
-                 size='large'
-                 value={this.state.partyInputValue}
-                 onChange={this.handlePartyNameChange}
-                 placeholder='Name your party here...'
-          />
+          <Form onSubmit={this.handleSubmit}>
+            <div><label className="AddScreen-PartyName">PARTY TITLE</label><br/><br/>
+              <Input className="AddScreen-PartyInput"
+                     size='large'
+                     value={this.state.partyInputValue}
+                     onChange={this.handlePartyNameChange}
+                     placeholder='Name your party here...'
+              />
 
 
-          </div>
-          <div><label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
-          <ul>
-            {
-              this.state.events.map(
-                item => (
-                  <li key={item.id}
-                      className="AddScreen-List">
-                    {item.content}
-                  </li>
+            </div>
+            <div><br/><br/>
+              <Divider hidden/>
+              <label className="AddScreen-PartyName">PICK A DATE</label><br/><br/>
+              <DatePicker className="AddScreen-DatePicker"
+                          selected={this.state.startDate}
+                          onChange={this.handleTimeChange}
+                          showTimeSelect
+                          timeFormat="HH:mm"
+                          timeIntervals={15}
+                          dateFormat="LLL"
+              /><br/>
+            </div>
+            <div><br/><br/>
+              <Divider hidden/>
+              <label className="AddScreen-PartyName">ADD GUEST</label><br/><br/>
+              <Input className="AddScreen-GuestsInput"
+                     size='large'
+                     value={this.state.namesInputValue}
+                     onChange={this.handleGuestsNamesChange}
+                     placeholder='Write your guest name...'
+              />
+              <Input onClick={this.addGuestsNames}
+                     type="button"
+                     value="+"
+              />
+            </div>
+            <ul>
+              {
+                this.state.guestsNames.map(
+                  task => (
+                    <li key={task.id}
+                        className="AddScreen-List">
+                      {task.guestName}
+                      <button
+                        data-task-id={task.id}
+                        onClick={this.handleDeleteClick}
+                      >
+                        delete
+                      </button>
+                    </li>
+                  )
                 )
-              )
-            }
-          </ul>
-          <Divider hidden/>
-          <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
-          <DatePicker className="AddScreen-DatePicker"
-            selected={this.state.startDate}
-            onChange={this.handleTimeChange}
-            showTimeSelect
-            timeFormat="HH:mm"
-            timeIntervals={15}
-            dateFormat="LLL"
-          /><br/>
-          </div>
-        <div><label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
-          <Divider hidden/>
-          <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
-          <Input className="AddScreen-GuestsInput"
-            size='large'
-            value={this.state.namesInputValue}
-            onChange={this.handleGuestsNamesChange}
-            placeholder='Write your guest name...'
-          />
-          <Input onClick={this.addGuestsNames}
-                 type="button"
-                 value="+"
-          />
+              }
+            </ul>
+            <br/><br/>
+            <Button color="black"
+                    type='submit'>Save
+            </Button>
+            <br/><br/>
+          </Form>
         </div>
-          <ul>
-            {
-              this.state.guestsNames.map(
-                task => (
-                  <li key={task.id}
-                  className="AddScreen-List">
-                    {task.guestName}
-                    <button
-                           data-task-id={task.id}
-                           onClick={this.handleDeleteClick}
-                           >
-                    delete</button>
-                  </li>
-                )
-              )
-            }
-          </ul>
-          <br/><br/>
-          <Button color="black"
-            type='submit'>Save
-          </Button>
-          <br/><br/>
-        </Form>
-      </div>
       </div>
     )
   }
