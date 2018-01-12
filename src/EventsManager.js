@@ -19,7 +19,7 @@ class EventsManager extends Component {
   handleClose = () => this.setState({ modalOpen: false })
 
 //ma wylane czy tu jest jakis formularz/input
-  addEvent = (title, start) => {
+  addEvent = (title, start, guestList) => {
     // this.setState({
     //   events: this.state.events.concat({
     //     id: this.state.events.map(
@@ -37,7 +37,8 @@ class EventsManager extends Component {
     firebase.database().ref('/events/' + uid).push({
       title: title,
       start: start.format(),
-      end: start.format()
+      end: start.format(),
+      guestList: guestList
     });
   };
 
