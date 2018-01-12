@@ -22,7 +22,7 @@ class Details extends React.Component {
               <Modal.Description>
                 <div className='modal-body'>
                   <ul>
-                    {Object.entries(this.props.event.guestList).map(
+                    {Object.entries(this.props.event.guestList || {}).map(
                       ([id, value]) => ({
                         id, ...value
                       })
