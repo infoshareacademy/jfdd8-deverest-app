@@ -110,7 +110,7 @@ class AddScreen extends React.Component {
               )
             }
           </ul>
-          <Divider hidden>OR</Divider>
+          <Divider hidden/>
           <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
           <DatePicker className="AddScreen-DatePicker"
             selected={this.state.startDate}
@@ -120,7 +120,7 @@ class AddScreen extends React.Component {
             timeIntervals={15}
             dateFormat="LLL"
           /><br/>
-          <Divider hidden>OR</Divider>
+          <Divider hidden/>
           <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
           <Input className="AddScreen-GuestsInput"
             size='large'
@@ -128,10 +128,10 @@ class AddScreen extends React.Component {
             onChange={this.handleGuestsNamesChange}
             placeholder='Write your guest name...'
           />
-          {/*<Input onClick={this.addGuestsNames}*/}
-                 {/*type="button"*/}
-                 {/*value="+"*/}
-          {/*/>*/}
+          <Input onClick={this.addGuestsNames}
+                 type="button"
+                 value="+"
+          />
 
           <ul>
             {
