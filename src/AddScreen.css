@@ -1,5 +1,5 @@
 .AddScreen-container {
-    background: url('picture/beach_dark.jpg') no-repeat bottom right;
+    background: url('picture/beach_dark.jpg') no-repeat top right;
     display: flex;
     justify-content: center;
     color: #fff;
@@ -27,8 +27,19 @@
 }
 
 .AddScreen-List {
-    text-align: left;
     list-style: none;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+ol.AddScreen-List {
+    overflow: scroll;
+}
+
+.AddScreen-List .Delete-Btn {
+    float: right;
+    margin: 5px 0;
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {

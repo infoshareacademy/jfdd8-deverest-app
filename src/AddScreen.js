@@ -97,7 +97,7 @@ class AddScreen extends React.Component {
                           dateFormat="LLL"
               /><br/>
             </div>
-            <div><br/><br/>
+            <div><br/>
               <Divider hidden/>
               <label className="AddScreen-PartyName">ADD GUEST</label><br/><br/>
               <Input className="AddScreen-GuestsInput"
@@ -119,6 +119,7 @@ class AddScreen extends React.Component {
                         className="AddScreen-List">
                       {task.guestName}
                       <button
+                        className="Delete-Btn"
                         data-task-id={task.id}
                         onClick={this.handleDeleteClick}
                       >
