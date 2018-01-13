@@ -106,10 +106,13 @@ class AddScreen extends React.Component {
                      onChange={this.handleGuestsNamesChange}
                      placeholder='Write your guest name...'
               />
+              <div>
               <Input onClick={this.addGuestsNames}
+                     className="AddScreen-AddBtn"
                      type="button"
-                     value="+"
+                     value="add"
               />
+              </div>
             </div>
             <ul>
               {
