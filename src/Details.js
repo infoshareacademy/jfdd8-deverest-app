@@ -5,21 +5,34 @@ import EditScreen from './EditScreen'
 
 
 class Details extends React.Component {
+
+    state = {
+          modalOpen: false
+    };
+
+    handleOpen = () => this.setState({ modalOpen: true});
+
+    handleClose = () => this.setState({ modalOpen: false });
+
+
   render() {
     return (
       <div className='main'>
 
           <div className='edit'>
-            <Modal size='tiny' closeIcon closeOnDimmerClick={false}
-                   trigger={<Button color='black'>EDIT</Button>}>
-              <Modal.Description>
-                <div className='modal-body'>
-                  <EditScreen event={this.props.event}/>
-                </div>
-              </Modal.Description>
-            </Modal>
+              <Modal
+                  closeIcon
+                  closeOnDimmerClick={false}
+                  open={this.state.modalOpen}
+                  onClose={this.handleClose}
+                  trigger={<Button onClick={this.handleOpen}>EDIT</Button>}
+                  size='small'>
+                  <EditScreen event={this.props.event} onAddDone={this.handleClose}/>
+
+              </Modal>
           </div>
 
+          {/*<EditScreen event={this.props.event}/>*/}
 
             <div className='data'>
           <h1>{this.props.event.title}</h1>
