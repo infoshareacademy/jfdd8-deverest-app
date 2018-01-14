@@ -9,7 +9,11 @@ class EditScreen extends React.Component {
 
   state = {
     partyInputValue: this.props.event.title,
-    guestsNames: [],
+    guestsNames:  this.props.event.guestList,
+    // startDate: this.props.event.end,
+
+
+
   }
 
   handleSubmit = (event) => {
