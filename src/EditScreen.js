@@ -12,28 +12,21 @@ class EditScreen extends React.Component {
     partyInputValue: this.props.event.title,
     guestsNames:  this.props.event.guestList || [],
     startDate: moment(this.props.event.end),
-
-
-
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const userUid = firebase.auth().currentUser.uid
+    const userUid = firebase.auth().currentUser.uid;
     firebase.database().ref('/events/' + userUid + '/' + this.props.event.id).set({
       title: this.state.partyInputValue,
       start: this.state.startDate.format(),
       end: this.state.startDate.format(),
-      guestNames: this.state.guestsNames
-    })
-    // this.props.addEvent(
-    //   this.state.partyInputValue,
-    //   this.state.startDate,
-    //   this.state.guestsNames
-    // );
+      guestList: this.state.guestsNames
+    });
+
     this.setState({
       taskInputValue: ''
-    })
+    });
     this.props.onAddDone()
   };
 
@@ -84,6 +77,7 @@ class EditScreen extends React.Component {
     return (
       <div className="AddScreen-container">
         <Form onSubmit={this.handleSubmit}>
+
           <div><label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
             <Input className="AddScreen-PartyInput"
                    size='large'
