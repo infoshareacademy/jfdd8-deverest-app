@@ -3,6 +3,8 @@ import persistState from 'redux-localstorage'
 import thunk from 'redux-thunk';
 import setupFirebase from './setupFirebase'
 import searching from './state/searching'
+import auth, { enableSync } from './state/auth'
+
 
 setupFirebase();
 
@@ -10,11 +12,12 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(
   applyMiddleware(thunk),
-  persistState([], { key: 'jfdd8-app-v3'})
+  persistState(['auth'], { key: 'wixer-party-planner'})
 );
 
 const reducer = combineReducers({
-  searching
+  searching,
+  auth
 });
 
 const store = createStore(
@@ -22,6 +25,6 @@ const store = createStore(
   enhancer
 );
 
-// store.dispatch(enableSync());
+store.dispatch(enableSync());
 
 export default store
