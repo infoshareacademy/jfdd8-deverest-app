@@ -3,6 +3,8 @@ import firebase from 'firebase'
 import SignInForm from "./SignInForm";
 import SignUpForm from "./SignUpForm";
 import SignOut from './SignOut';
+import { connect } from 'react-redux'
+
 
 class Auth extends Component {
     state = {
@@ -38,4 +40,8 @@ class Auth extends Component {
     }
 }
 
-export default Auth
+export default connect(
+  state => ({
+    user: state.auth.user
+  })
+)(Auth)
