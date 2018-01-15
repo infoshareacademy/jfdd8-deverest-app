@@ -46,6 +46,15 @@ class EventList extends React.Component {
                   <Modal closeIcon closeOnDimmerClick={false} trigger={<Button>Details</Button>} size='small'>
                     <Details event={event}/>
                   </Modal>
+                  <Button
+
+                    data-task-id={event.id}
+                    onClick={this.handleRemoveClick}
+                    icon='trash'
+
+                  >
+
+                  </Button>
 
                 </List.Content>
                 <Image avatar src='/assets/images/avatar/small/lena.png'/>
