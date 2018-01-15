@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import firebase from 'firebase'
-import {Button, Input, Container} from 'semantic-ui-react';
+import {Button, Input, Container, Message} from 'semantic-ui-react';
+import { signIn } from "../state/auth";
+import { connect } from 'react-redux'
 
 import Logo from '../picture/logo.png';
 import './WelcomeScreen.css'
@@ -9,27 +10,28 @@ class SignInForm extends Component {
 
   state = {
     email: '',
-    password: ''
+    password: '',
+    error: null
   };
 
-  handleChange = event => {
+  handleChange = (event, { name, value }) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name || name]: event.target.value || value
     })
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    firebase.auth().signInWithEmailAndPassword(
-      this.state.email,
-      this.state.password
+
+    const { email, password } = this.state;
+
+    this.props.signIn(
+      email,
+      password,
     ).catch(
-      error => {
-        this.setState({
-            error: error.message
-          }
-        );
-      }
+      error => this.setState({
+        error: error.message
+      })
     )
   };
 
@@ -39,6 +41,9 @@ class SignInForm extends Component {
         <div className="WelcomeScreen-gradient">
           <img src={Logo} alt="logo" className="logo-responsive"/>
           <Container text>
+            <Message negative hidden={this.state.error === null}>
+              <p>{this.state.error}</p>
+            </Message>
             <form
               onSubmit={this.handleSubmit}
             >
@@ -70,4 +75,7 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInForm
+export default connect(
+  null,
+  { signIn }
+)(SignInForm)
