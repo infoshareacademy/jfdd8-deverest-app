@@ -4,7 +4,7 @@ import { Input, Button } from 'semantic-ui-react'
 class SearchBar extends React.Component {
   state ={
     term: ''
-  }
+  };
 
   handleTermChange = (event) => {
     this.setState({

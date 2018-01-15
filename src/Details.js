@@ -62,7 +62,7 @@ class Details extends React.Component {
                 </div>
               </Modal.Description>
             </Modal>
-          </div>}
+          </div>
         </div>
 
       </div>
