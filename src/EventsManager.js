@@ -5,7 +5,8 @@ import EventList from "./EventList";
 import AddScreen from './AddScreen'
 import firebase from 'firebase'
 import moment from 'moment';
-
+import { connect } from 'react-redux';
+import { reset } from './state/searching'
 
 
 class EventsManager extends Component {
@@ -14,25 +15,14 @@ class EventsManager extends Component {
     modalOpen: false
   }
 
-  handleOpen = () => this.setState({ modalOpen: true })
+  handleOpen = () => {
+    this.setState({ modalOpen: true })
+    this.props.reset()
+  }
 
   handleClose = () => this.setState({ modalOpen: false })
 
-//ma wylane czy tu jest jakis formularz/input
   addEvent = (title, start, guestList) => {
-    // this.setState({
-    //   events: this.state.events.concat({
-    //     id: this.state.events.map(
-    //       item => item.id
-    //     ).reduce(
-    //       (biggest, next) => Math.max(biggest, next),
-    //       0
-    //     ) + 1,
-    //     title: title,
-    //     start: start.toDate(),
-    //     end: start.toDate()
-    //   })
-    // });
     const uid = firebase.auth().currentUser.uid;
     firebase.database().ref('/events/' + uid).push({
       title: title,
@@ -43,11 +33,7 @@ class EventsManager extends Component {
   };
 
   componentWillMount() {
-    // this.setState({
-    //   events: JSON.parse(localStorage.getItem('events') || '[]').map(
-    //     event => ({...event, start: new Date(event.start), end: new Date(event.end)})
-    //   )
-    // })
+
     const uid = firebase.auth().currentUser.uid;
     firebase.database().ref('/events/' + uid).on(
       'value',
@@ -67,11 +53,6 @@ class EventsManager extends Component {
       }
     )
   }
-
-  // componentDidUpdate() {
-  //   localStorage.setItem('events', JSON.stringify(this.state.events))
-  // }
-  // nie potrzebujemy bo nie korzystamy z localstorage bo zawsze na koncu sie wywolu
 
   render() {
     const events = this.state.events.filter(
@@ -120,5 +101,7 @@ class EventsManager extends Component {
   }
 }
 
-
-export default EventsManager;
+export default connect(
+  null,
+  { reset }
+)(EventsManager);
