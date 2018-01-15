@@ -9,7 +9,8 @@ class SignUpForm extends Component {
 
   state = {
     email: '',
-    password: ''
+    password: '',
+    error: null
   };
 
   handleChange = (event, { name, value }) => {
