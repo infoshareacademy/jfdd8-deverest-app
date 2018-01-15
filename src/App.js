@@ -4,21 +4,17 @@ import { Button } from 'semantic-ui-react'
 import './App.css';
 import EventsManager from "./EventsManager";
 import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { search, reset } from './state/searching'
 
 class App extends Component {
-  state={
-    searchPhrase: ''
-  };
+
 
   onSearch = (text) => {
-    this.setState({
-      searchPhrase: text
-    })
+    this.props.search(text)
   };
   handleClearTerm = () => {
-    this.setState({
-      searchPhrase: ''
-    })
+    this.props.reset()
   };
 
   render() {
@@ -30,11 +26,17 @@ class App extends Component {
         <Button className="Search-button"
           onClick={this.handleClearTerm}>Clear search</Button>
           <EventsManager
-            searchPhrase={this.state.searchPhrase}
+            searchPhrase={this.props.searchPhrase}
           />
       </div>
     );
   }
 }
 
-export default App;
+// export default App;
+export default connect(
+  state => ({
+    searchPhrase: state.searching.searchPhrase
+  }),
+  { search, reset }
+)(App);
