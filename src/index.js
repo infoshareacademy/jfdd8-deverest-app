@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 
 import {
   BrowserRouter as Router,
@@ -24,28 +24,25 @@ import Auth from "./Auth/Auth";
 import SignOut from "./Auth/SignOut";
 
 
-
 ReactDOM.render(
   <Provider store={store}>
-  <Router>
-    <div>
-      <SignOut/>
+    <Router>
+      <div>
+        <SignOut/>
 
-          <Switch>
-           <Auth>
+        <Switch>
+          <Auth>
             <Route exact path="/" component={App}/>
             <Route path="/addscreen" component={AddScreen}/>
             <Route path="/details" component={Details}/>
 
-           </Auth>
-          </Switch>
+          </Auth>
+        </Switch>
 
-    </div>
+      </div>
 
-  </Router>
+    </Router>
   </Provider>,
-  </Router>
-</Provider>,
 
 
   document.getElementById('root'));
