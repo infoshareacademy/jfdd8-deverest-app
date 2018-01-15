@@ -2,6 +2,7 @@ import React from 'react'
 import {Button, Form, Input} from 'semantic-ui-react';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
+import firebase from 'firebase'
 import './AddScreen.css'
 
 
@@ -9,8 +10,8 @@ class EditScreen extends React.Component {
 
   state = {
     partyInputValue: this.props.event.title,
-    guestsNames:  this.props.event.guestList,
-    // startDate: this.props.event.end,
+    guestsNames:  this.props.event.guestList || [],
+    startDate: moment(this.props.event.end),
 
 
 
@@ -18,11 +19,18 @@ class EditScreen extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.addEvent(
-      this.state.partyInputValue,
-      this.state.startDate,
-      this.state.guestsNames
-    );
+    const userUid = firebase.auth().currentUser.uid
+    firebase.database().ref('/events/' + userUid + '/' + this.props.event.id).set({
+      title: this.state.partyInputValue,
+      start: this.state.startDate.format(),
+      end: this.state.startDate.format(),
+      guestNames: this.state.guestsNames
+    })
+    // this.props.addEvent(
+    //   this.state.partyInputValue,
+    //   this.state.startDate,
+    //   this.state.guestsNames
+    // );
     this.setState({
       taskInputValue: ''
     })

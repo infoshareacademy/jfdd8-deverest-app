@@ -27,7 +27,10 @@ class Details extends React.Component {
                   onClose={this.handleClose}
                   trigger={<Button onClick={this.handleOpen}>EDIT</Button>}
                   size='small'>
-                  <EditScreen event={this.props.event} onAddDone={this.handleClose}/>
+                  <EditScreen
+                    event={this.props.event}
+                    onAddDone={this.handleClose}
+                  />
 
               </Modal>
           </div>
