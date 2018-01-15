@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import setupFirebase from './setupFirebase'
+import {Provider} from 'react-redux'
 
 import {
   BrowserRouter as Router,
@@ -16,15 +16,15 @@ import './index.css';
 import App from './App';
 import AddScreen from './AddScreen';
 import Details from './Details';
+import store from './store'
 
 
 import registerServiceWorker from './registerServiceWorker';
 import Auth from "./Auth/Auth";
 import SignOut from "./Auth/SignOut";
 
-setupFirebase();
-
 ReactDOM.render(
+  <Provider store={store}>
   <Router>
     <div>
       <SignOut/>
@@ -40,8 +40,9 @@ ReactDOM.render(
 
     </div>
 
-  </Router>,
+  </Router>
+</Provider>,
 
 
-  document.getElementById('root'))
+  document.getElementById('root'));
 registerServiceWorker();
