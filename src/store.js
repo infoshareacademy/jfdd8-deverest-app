@@ -2,7 +2,9 @@ import { compose, createStore, combineReducers, applyMiddleware } from 'redux'
 import persistState from 'redux-localstorage'
 import thunk from 'redux-thunk';
 import setupFirebase from './setupFirebase'
-import auth, { enableSync, disableSync } from './state/auth'
+import searching from './state/searching'
+import auth, { enableSync } from './state/auth'
+
 
 setupFirebase();
 
@@ -14,6 +16,7 @@ const enhancer = composeEnhancers(
 );
 
 const reducer = combineReducers({
+  searching,
   auth
 });
 

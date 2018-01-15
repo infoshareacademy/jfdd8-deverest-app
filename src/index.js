@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
 import {
   BrowserRouter as Router,
@@ -12,16 +12,18 @@ import 'semantic-ui-css/semantic.min.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-datepicker/dist/react-datepicker.css';
 import './index.css';
+import store from './store'
 
 import App from './App';
 import AddScreen from './AddScreen';
 import Details from './Details';
-import store from './store'
 
 
 import registerServiceWorker from './registerServiceWorker';
 import Auth from "./Auth/Auth";
 import SignOut from "./Auth/SignOut";
+
+
 
 ReactDOM.render(
   <Provider store={store}>
@@ -40,6 +42,8 @@ ReactDOM.render(
 
     </div>
 
+  </Router>
+  </Provider>,
   </Router>
 </Provider>,
 
