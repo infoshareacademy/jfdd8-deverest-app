@@ -91,7 +91,7 @@ class EventsManager extends Component {
             closeOnDimmerClick={false}
           open={this.state.modalOpen}
           onClose={this.handleClose}
-          trigger={<Button onClick={this.handleOpen}>Add Event</Button>}
+          trigger={<Button onClick={this.handleOpen} className='Add-Event-Btn'>Add Event</Button>}
           size='small'>
             <AddScreen addEvent={this.addEvent} onAddDone={this.handleClose}/>
         </Modal>
