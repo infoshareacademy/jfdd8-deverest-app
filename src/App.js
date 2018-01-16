@@ -22,9 +22,10 @@ class App extends Component {
       <div className="App"><br/>
 
         <SearchBar
-          onSearch={this.onSearch} />
-        <Button className="Search-button"
-          onClick={this.handleClearTerm}>Clear search</Button>
+          onSearch={this.onSearch}
+          handleClearTerm={this.handleClearTerm}/>
+        {/*<Button className="Search-button"*/}
+          {/*onClick={this.handleClearTerm}>Clear search</Button>*/}
           <EventsManager
             searchPhrase={this.props.searchPhrase}
           />
