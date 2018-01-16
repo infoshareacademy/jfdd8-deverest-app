@@ -1,9 +1,12 @@
 .ui.animated.button.signOut-button {
-    color: white;
+    color: #D05253;
     background-color: transparent;
     border-style: none;
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     padding: 1em;
     margin: 1em;
+}
+.ui.vertical.animated.button .visible.content {
+    color: #D05253;
 }

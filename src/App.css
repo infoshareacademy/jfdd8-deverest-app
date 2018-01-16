@@ -1,13 +1,15 @@
 body {
-  background: url('picture/21.jpg') no-repeat left center;
+  background-color: #14202C;
   font-family: 'Montserrat', sans-serif;
   max-height: 100vh;
+  color: #D05253;
 }
 
 #root .ui.tab.active, .ui.tab.open {
   display: block;
-  background-color: rgba(255,255,255, 0.3);
-  text-align: left
+  background-color: #203040;
+  text-align: left;
+
 }
 
 .App {
@@ -40,7 +42,7 @@ body {
 }
 
 .rbc-off-range-bg{
-  background-color: rgba(0,0,0, 0.4);
+  background-color: #182131;
 }
 
 .rbc-day-bg.rbc-today{
@@ -48,7 +50,8 @@ body {
 }
 
 .rbc-toolbar button {
-  color: black;
+  color: #5D718C;
+  text-transform: uppercase!important;
 }
 
 .rbc-toolbar button:active {
@@ -75,4 +78,18 @@ body {
   border-bottom-right-radius: 0;
   border-top-left-radius: .28571429rem;
   border-bottom-left-radius: .28571429rem;
+}
+
+.ui.secondary.menu .item {
+  color: #D05253;
+}
+
+
+.ui.secondary.menu .active.item {
+  color: #D05253;
+  border: 1px solid #D05253;
+}
+
+.ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
+  color: #D05253;
 }
