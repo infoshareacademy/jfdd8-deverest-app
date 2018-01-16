@@ -1,99 +1,140 @@
 body {
-  background-color: #14202C;
-  font-family: 'Montserrat', sans-serif;
-  max-height: 100vh;
-  color: #D05253;
+    background-color: #14202C;
+    font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;
+    color: #D05253;
 }
 
 #root .ui.tab.active, .ui.tab.open {
-  display: block;
-  background-color: #203040;
-  text-align: left;
+    display: block;
+    background-color: #203040;
+    text-align: left;
 
 }
 
 .App {
-  text-align: center;
-  max-width: 700px;
-  height: 100vh;
-  margin: 0 auto;
+    text-align: center;
+    max-width: 700px;
+    height: 100vh;
+    margin: 0 auto;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
-#root .rbc-event {
-  cursor: pointer;
-  color: #fff;
-  border-radius: 0;
-  background-color: rgb(24, 33, 49);
+.rbc-event {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+    border: 2px solid #f25a59;
+    background-color: rgba(242, 90, 89, 0.8);
+    padding: 5px 5px;
+    margin-top: 10px;
 }
 
-.rbc-off-range-bg{
-  background-color: #182131;
+.rbc-show-more {
+    background-color: #182131;
+    text-align: center;
 }
 
-.rbc-day-bg.rbc-today{
-  background-color: rgba(0,0,0, 0.0);
+.rbc-off-range-bg {
+    background-color: #182131;
+}
+
+.rbc-day-bg.rbc-today {
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .rbc-toolbar button {
-  color: #5D718C;
+    color: #5D718C;
 }
 
 .rbc-toolbar button:active {
-  background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #root .Search-button {
-  display: inline-block;
+    display: inline-block;
 }
 
 #root .ui.icon.input input {
-  padding-right: 15em!important;
+    padding-right: 15em !important;
 }
 
 .ui.button.clear {
-  border-top-right-radius: .28571429rem;
-  border-bottom-right-radius: .28571429rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+    border-top-right-radius: .28571429rem;
+    border-bottom-right-radius: .28571429rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .ui.input .search input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: .28571429rem;
-  border-bottom-left-radius: .28571429rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: .28571429rem;
+    border-bottom-left-radius: .28571429rem;
 }
 
 .ui.secondary.menu .item {
-  color: #D05253;
+    color: #D05253;
 }
 
 .ui.secondary.menu .active.item {
-  color: #D05253;
-  border: 1px solid #D05253;
+    color: #D05253;
+    border: 1px solid #D05253;
 }
 
 .ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
-  color: #D05253;
+    color: #D05253;
 }
 
 .rbc-date-cell > a, .rbc-date-cell > a:active, .rbc-date-cell > a:visited {
-  position: relative;
-  top: 50%;
-  right: 5%;
+    position: relative;
+    top: 50%;
+    right: 5%;
+}
+
+.rbc-day-bg + .rbc-day-bg {
+    border-color: rgba(93, 113, 140, 0.3);
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+    padding-top: 1%;
+}
+
+.ui.segment {
+    box-shadow: 2px 2px 6px 2px rgba(60, 72, 84, 0.15);
+    position: relative;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    margin: 0;
+    padding: 0;
+}
+
+button.ui.button {
+    background-color: #D05253;
+}
+
+.ui.divided.list>.item {
+    border-top: 1px solid rgba(93, 113, 140, 0.3);
+    padding: 2.5%;
+}
+
+.ui.list .list>.item>img.image+.content, .ui.list>.item>img.image+.content {
+    font-size: larger;
+}
+
+.rbc-month-view .rbc-header + .rbc-header {
+    border-left: 0;
 }
