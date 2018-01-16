@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import {BrowserRouter as Router, Link} from 'react-router-dom'
 import {Tab, Modal, Button, Icon, Header, List, Image} from 'semantic-ui-react'
@@ -37,6 +38,10 @@ class EventList extends React.Component {
   render() {
     return (
       <div>
+        {
+          this.props.searchPhrase && <p>Currently searching for: {this.props.searchPhrase}</p>
+        }
+
         <List divided verticalAlign='middle'>
           {this.props.events.map(
             event =>
@@ -69,4 +74,8 @@ class EventList extends React.Component {
   }
 }
 
-export default EventList;
+export default connect(
+  state => ({
+    searchPhrase: state.searching.searchPhrase
+  })
+)(EventList)
