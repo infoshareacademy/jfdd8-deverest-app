@@ -39,29 +39,35 @@ class EventList extends React.Component {
       <div>
         <List divided verticalAlign='middle'>
           {this.props.events.map(
-            event =>
-              <List.Item key={event.id}>
-                <List.Content floated='right'>
+            event => {
+              const matches = event.title.match(/#(\w+)/)
+              const imageName = (matches && matches[1]) || 'default'
+              return (
+                <List.Item key={event.id}>
+                  <List.Content floated='right'>
 
-                  <Modal closeIcon closeOnDimmerClick={false} trigger={<Button>Details</Button>} size='small'>
-                    <Details event={event}/>
-                  </Modal>
-                  <Button
+                    <Modal closeIcon closeOnDimmerClick={false} trigger={<Button>Details</Button>} size='small'>
+                      <Details event={event}/>
+                    </Modal>
+                    <Button
 
-                    data-task-id={event.id}
-                    onClick={this.handleRemoveClick}
-                    icon='trash'
+                      data-task-id={event.id}
+                      onClick={this.handleRemoveClick}
+                      icon='trash'
 
-                  >
+                    >
 
-                  </Button>
+                    </Button>
 
-                </List.Content>
-                <Image avatar src='/assets/images/avatar/small/lena.png'/>
-                <List.Content>
-                  {event.title}
-                </List.Content>
-              </List.Item>
+                  </List.Content>
+                  <Image avatar src={process.env.PUBLIC_URL + '/images/' + imageName + '.png'}/>
+                  <List.Content>
+                    {event.title}
+                  </List.Content>
+                </List.Item>
+              )
+            }
+
           )}
         </List>
       </div>
