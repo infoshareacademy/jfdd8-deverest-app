@@ -32,6 +32,7 @@ class SearchBar extends React.Component {
           placeholder='Type to search...'
           onChange={this.handleTermChange}
         />
+
       </div>
   )
   }
