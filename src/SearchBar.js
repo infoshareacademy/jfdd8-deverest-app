@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Button } from 'semantic-ui-react'
+import { Input, Button, Icon } from 'semantic-ui-react'
 
 class SearchBar extends React.Component {
   state ={
@@ -23,15 +23,30 @@ class SearchBar extends React.Component {
     return (
       <div>
         <Input
-          value={this.state.term}
-          icon={{
-            name: 'search',
-            circular: true,
-            link: true,
-            onClick: this.search}}
-          placeholder='Type to search...'
-          onChange={this.handleTermChange}
-        />
+          // value={this.state.term}
+          // icon={{
+          //   name: 'search',
+          //   circular: true,
+          //   link: true,
+          //   onClick: this.search}}
+          // placeholder='Type to search...'
+          // onChange={this.handleTermChange}
+
+        >
+          <Input
+            value={this.state.term}
+            icon={{
+              name: 'search',
+              circular: true,
+              link: true,
+              onClick: this.search}}
+            placeholder='Type to search...'
+            onChange={this.handleTermChange}/>
+          <Button
+            type="icon"
+            onClick={this.props.handleClearTerm}
+          >X</Button>
+      </Input>
 
       </div>
   )
