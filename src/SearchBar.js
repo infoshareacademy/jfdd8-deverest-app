@@ -34,6 +34,7 @@ class SearchBar extends React.Component {
 
         >
           <Input
+            className="search"
             value={this.state.term}
             icon={{
               name: 'search',
@@ -43,6 +44,7 @@ class SearchBar extends React.Component {
             placeholder='Type to search...'
             onChange={this.handleTermChange}/>
           <Button
+            className="clear"
             type="icon"
             onClick={this.props.handleClearTerm}
           >X</Button>
