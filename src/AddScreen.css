@@ -1,8 +1,8 @@
 .AddScreen-container {
-    background: url('picture/beach_dark.jpg') no-repeat top right;
+    background: #14202C;
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: #D05253;
     text-align: center;
     height: 50%;
     padding-top: 10%;
@@ -10,14 +10,13 @@
 }
 
 .AddScreen-container {
-    background-color: rgba(0,0,0, 0.9);
     max-width: 800px;
     width: 100%;
     height: auto;
 }
 
 .AddScreen-PartyName {
-    font-size: 26px;
+    font-size: 1.5rem;
     letter-spacing: 2px;
 }
 
@@ -28,7 +27,7 @@
 
 .AddScreen-List {
     list-style: none;
-    color: white;
+    color: #D05253;
     text-align: center;
     padding: 10px 0;
 }
@@ -48,9 +47,9 @@
 
 .AddScreen-DatePicker, .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
     width: 350px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid white;
+    border: 1px solid #D05253;
     padding: 0.9em;
     font-size: 1rem;
     max-width: 100%;
@@ -64,9 +63,9 @@
 }
 
 input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
-    background-color: rgba(0,0,0,0.5)!important;
-    color: white!important;
-    border-color: white!important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: #D05253 !important;
+    border-color: white !important;
 }
 
 .react-datepicker__day--selected:focus {
@@ -74,15 +73,15 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
 }
 
 .react-datepicker__month-container {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .react-datepicker__header, .react-datepicker__header--time {
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .react-datepicker__current-month, .react-datepicker-time__header {
@@ -90,9 +89,9 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
 }
 
 .AddScreen-container .ui.input input {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid white;
+    border: 1px solid #D05253;
     padding: 0.9em;
     font-size: 1rem;
     max-width: 100%;
@@ -102,18 +101,19 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
 }
 
 .AddScreen-container .ui.input input:focus {
-    background-color: rgba(0,0,0,0.5);
-    border: 1px solid ;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(40, 214, 116, 0.5);
     color: white;
 }
 
 .AddScreen-container .ui.input input:active {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
 .AddScreen-container .ui.button {
-    background: url('./picture/21.jpg') no-repeat left center;
+    background-color: rgba(40, 214, 116, 0.6);
+    border: 2px solid rgba(40, 214, 116, 1);
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
@@ -124,7 +124,7 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
 }
 
 .AddScreen-container .ui.button:hover {
-    background: url('./picture/21.jpg') no-repeat left center;
+    background-color: rgba(40, 214, 116, 0.8);
     color: #fff;
 }
 
@@ -133,7 +133,7 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
     text-align: center;
 }
 
-.ui.modal>.icon:first-child+*, .ui.modal>:first-child:not(.icon) .ui.modal>:last-child {
+.ui.modal > .icon:first-child + *, .ui.modal > :first-child:not(.icon) .ui.modal > :last-child {
     border-radius: 0;
 }
 
