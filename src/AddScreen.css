@@ -6,11 +6,12 @@
     text-align: center;
     height: 50%;
     padding-top: 10%;
+    padding-bottom: 5%;
     font-family: 'Montserrat', sans-serif;
 }
 
 .AddScreen-container {
-    max-width: 800px;
+    max-width: 100%;
     width: 100%;
     height: auto;
 }
@@ -46,6 +47,13 @@
 }
 
 
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item:hover {
+    background-color: rgba(40, 214, 116, 0.4)
+}
+
+.react-datepicker {
+    background-color: #4a6a82;
+}
 
 .AddScreen-DatePicker, .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
     width: 350px;

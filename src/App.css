@@ -103,7 +103,7 @@ body {
 
 .ui.input .search input {
     border: 1px solid #D05253;
-    background-color: #4a6a82;
+    background-color: #2f4a5f;
     color: white;
 }
 
@@ -184,5 +184,8 @@ button.ui.button {
     font-size: 0.85em;
 }
 
+div.ui.input {
+    margin-bottom: 2%;
+}
 
 
