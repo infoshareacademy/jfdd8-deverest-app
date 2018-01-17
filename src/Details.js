@@ -25,7 +25,7 @@ class Details extends React.Component {
                   closeOnDimmerClick={false}
                   open={this.state.modalOpen}
                   onClose={this.handleClose}
-                  trigger={<Button onClick={this.handleOpen}>EDIT</Button>}
+                  trigger={<Button className='editButton' onClick={this.handleOpen}>EDIT</Button>}
                   size='small'>
                   <EditScreen
                     event={this.props.event}
@@ -45,7 +45,7 @@ class Details extends React.Component {
 
           <div className='modal'>
             <Modal size='tiny' closeIcon closeOnDimmerClick={false}
-                   trigger={<Button color='black'>Show Guests</Button>}>
+                   trigger={<Button className='showGuestsButton'>Show Guests</Button>}>
               <Modal.Description>
                 <div className='modal-body'>
                   <ul>

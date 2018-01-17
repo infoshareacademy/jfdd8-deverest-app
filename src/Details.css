@@ -83,3 +83,21 @@ ul {
     letter-spacing: 2px;
 }
 
+.ui.button.showGuestsButton {
+    background-color: black;
+    color: white;
+}
+.ui.button.showGuestsButton:hover {
+    letter-spacing: 2px;
+}
+
+.ui.button.editButton {
+    background-color: black;
+    color: white;
+}
+.ui.button.editButton:hover {
+    letter-spacing: 2px;
+}
+
+
+
