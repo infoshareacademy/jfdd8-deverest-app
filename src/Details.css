@@ -14,7 +14,7 @@
 }
 h1 {
     position: absolute;
-    background: url("./picture/21.jpg") no-repeat left center;
+    background-color: black;
     color: white;
     border-radius: 10px;
     width: 50%;
@@ -26,6 +26,8 @@ h2 {
     position: absolute;
     top: 150px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
 }
 
 .modal {
@@ -43,14 +45,16 @@ h2 {
 
 ul li {
     list-style-type: none;
-    color: black;
+    color: white;
     padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
 }
 
 .modal-body {
     display: flex;
     justify-content: center;
-    background: url("./picture/21.jpg") no-repeat left center;
+    background: url("./picture/beach.jpg") no-repeat left center;
 }
 
 ul {
@@ -59,7 +63,7 @@ ul {
 
 .main {
     height: 100vh;
-    background: url("./picture/beach_dark.jpg") no-repeat left center;
+    background: url("./picture/beach.jpg") no-repeat left center;
 }
 
 .main :after :before {
@@ -68,8 +72,10 @@ ul {
 
 .dateView {
     color: white;
-    background: url("./picture/21.jpg") no-repeat left center;
+    background-color: black;
     padding: 5px;
     border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
 }
 
