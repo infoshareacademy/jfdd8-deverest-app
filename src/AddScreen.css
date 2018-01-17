@@ -113,19 +113,21 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
 }
 
 .AddScreen-container .ui.button {
-    background: url('./picture/21.jpg') no-repeat left center;
+    background-color: black;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     padding: 0.9em;
-    width: 100%;
+    width: 25%;
     display: inline-block;
     margin: auto;
 }
 
 .AddScreen-container .ui.button:hover {
-    background: url('./picture/21.jpg') no-repeat left center;
-    color: #fff;
+    background-color: black;
+    color: white;
+    letter-spacing: 3px;
+
 }
 
 .AddScreen-container .ui.text.container {

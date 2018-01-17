@@ -45,7 +45,7 @@ class Details extends React.Component {
 
           <div className='modal'>
             <Modal size='tiny' closeIcon closeOnDimmerClick={false}
-                   trigger={<Button color='purple'>Show Guests</Button>}>
+                   trigger={<Button color='black'>Show Guests</Button>}>
               <Modal.Description>
                 <div className='modal-body'>
                   <ul>
