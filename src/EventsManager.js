@@ -85,7 +85,7 @@ class EventsManager extends Component {
     ];
 
     return (
-      <div>
+      <div style={{ position: 'relative'}}>
         <Modal
             closeIcon
             closeOnDimmerClick={false}

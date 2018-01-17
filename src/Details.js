@@ -31,7 +31,6 @@ class Details extends React.Component {
                     event={this.props.event}
                     onAddDone={this.handleClose}
                   />
-
               </Modal>
           </div>
 

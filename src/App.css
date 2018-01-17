@@ -185,7 +185,11 @@ button.ui.button {
 }
 
 div.ui.input {
-    margin-bottom: 2%;
 }
 
+.Add-Event-Btn.ui.button {
+    position: relative;
+    bottom: -40px;
+    right: 0;
+}
 
