@@ -9,7 +9,6 @@ body {
     display: block;
     background-color: #203040;
     text-align: left;
-
 }
 
 div.App {
@@ -174,6 +173,7 @@ div.App {
 
 button.ui.button {
     background-color: #D05253;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .ui.divided.list > .item {
@@ -185,7 +185,7 @@ button.ui.button {
     font-size: larger;
 }
 
-.rbc-ellipsis, .rbc-event-label, .rbc-row-segment .rbc-event-content{
+.rbc-ellipsis, .rbc-event-label, .rbc-row-segment .rbc-event-content {
     font-size: 0.85em;
 }
 

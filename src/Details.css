@@ -1,5 +1,5 @@
 .main {
-    height: 75vh;
+    height: 100vh;
     background: #020d19;
 }
 
@@ -12,7 +12,7 @@
 
 .data {
     position: relative;
-    top: 150px;
+    top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,13 +23,13 @@ h1 {
     position: absolute;
     color: #D05253;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 h2 {
     position: absolute;
     text-align: center;
-    top: 10px;
+    top: 20px;
 }
 
 .dateView {

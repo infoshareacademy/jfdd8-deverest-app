@@ -30,6 +30,7 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
     text-align: match-parent;
     vertical-align: bottom!important;
@@ -43,6 +44,11 @@
     color: white;
     padding: 5px;
     border: 1px solid #D05253;
+    background-color: rgba(208, 82, 83, 0.4);
+}
+
+.AddScreen-List .Delete-Btn:hover {
+    cursor: pointer;
     background-color: rgba(208, 82, 83, 0.2);
 }
 
@@ -138,6 +144,7 @@ li.react-datepicker__time-list-item {
     text-align: center;
     margin: auto;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .AddScreen-container .ui.input input:focus {
@@ -187,6 +194,7 @@ li.react-datepicker__time-list-item {
 
  button.ui.button:hover {
      background-color: rgba(40, 214, 116, 0.6);
+     cursor: pointer;
  }
 
 
