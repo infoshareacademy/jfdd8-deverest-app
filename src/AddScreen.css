@@ -60,6 +60,12 @@
     color: #ffffff;
 }
 
+.ui.form input:not([type]):focus, .ui.form input[type=date]:focus, .ui.form input[type=datetime-local]:focus, .ui.form input[type=email]:focus, .ui.form input[type=file]:focus, .ui.form input[type=number]:focus, .ui.form input[type=password]:focus, .ui.form input[type=search]:focus, .ui.form input[type=tel]:focus, .ui.form input[type=text]:focus, .ui.form input[type=time]:focus, .ui.form input[type=url]:focus {
+    border: 1px solid rgba(40, 214, 116, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
 .react-datepicker__day--selected {
     background-color: #D05253;
 }

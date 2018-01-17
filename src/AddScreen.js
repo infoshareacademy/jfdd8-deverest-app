@@ -133,7 +133,7 @@ class AddScreen extends React.Component {
             </ul>
             <br/><br/>
             <Button color="black"
-                    type='submit'>Save
+                    type='submit'>Save Event
             </Button>
             <br/><br/>
           </Form>
