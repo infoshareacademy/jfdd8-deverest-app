@@ -184,12 +184,13 @@ button.ui.button {
     font-size: 0.85em;
 }
 
-div.ui.input {
+.Add-Event-Btn.ui.button {
+    position: absolute;
+    right: 0;
+    top: 20px;
 }
 
-.Add-Event-Btn.ui.button {
-    position: relative;
-    bottom: -40px;
-    right: 0;
+div.ui.secondary.menu {
+    padding-top: 20px;
 }
 
