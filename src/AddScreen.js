@@ -82,8 +82,6 @@ class AddScreen extends React.Component {
                      onChange={this.handlePartyNameChange}
                      placeholder='Name your party here...'
               />
-
-
             </div>
             <div><br/><br/>
               <Divider hidden/>

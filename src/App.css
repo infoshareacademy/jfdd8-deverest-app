@@ -48,6 +48,7 @@ body {
     background-color: #182131;
     text-align: center;
     color: #28d674;
+    font-size: 0.8em;
 }
 
 .rbc-off-range-bg {
@@ -177,6 +178,10 @@ button.ui.button {
 
 .ui.list .list > .item > img.image + .content, .ui.list > .item > img.image + .content {
     font-size: larger;
+}
+
+.rbc-ellipsis, .rbc-event-label, .rbc-row-segment .rbc-event-content{
+    font-size: 0.85em;
 }
 
 
