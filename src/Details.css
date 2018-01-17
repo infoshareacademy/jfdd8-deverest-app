@@ -14,8 +14,7 @@
 }
 h1 {
     position: absolute;
-    background-color: black;
-    opacity: .6;
+    background: url("./picture/21.jpg") no-repeat left center;
     color: white;
     border-radius: 10px;
     width: 50%;
@@ -26,6 +25,7 @@ h1 {
 h2 {
     position: absolute;
     top: 150px;
+    color: white;
 }
 
 .modal {
@@ -59,7 +59,7 @@ ul {
 
 .main {
     height: 100vh;
-    background: url("./picture/21.jpg") no-repeat left center;
+    background: url("./picture/beach_dark.jpg") no-repeat left center;
 }
 
 .main :after :before {
@@ -68,8 +68,7 @@ ul {
 
 .dateView {
     color: white;
-    background-color: black;
-    opacity: .6;
+    background: url("./picture/21.jpg") no-repeat left center;
     padding: 5px;
     border-radius: 10px;
 }
