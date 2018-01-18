@@ -5,10 +5,18 @@ body {
     color: #D05253;
 }
 
+body.light {
+    background-color: white;
+}
+
 #root .ui.tab.active, .ui.tab.open {
     display: block;
     background-color: #203040;
     text-align: left;
+}
+
+.light #root .ui.tab.active, .ui.tab.open {
+    background-color: antiquewhite;
 }
 
 div.App {

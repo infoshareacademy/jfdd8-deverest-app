@@ -47,3 +47,6 @@ ReactDOM.render(
 
   document.getElementById('root'));
 registerServiceWorker();
+
+
+// document.querySelector('body').classList.add('light')
