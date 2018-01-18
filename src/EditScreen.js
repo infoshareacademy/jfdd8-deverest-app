@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Form, Input} from 'semantic-ui-react';
+import {Button, Form, Input, Divider} from 'semantic-ui-react';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import firebase from 'firebase'
@@ -76,6 +76,7 @@ class EditScreen extends React.Component {
   render () {
     return (
       <div className="AddScreen-container">
+        <div className="dark-theme">
         <Form onSubmit={this.handleSubmit}>
 
           <div><label className="AddScreen-PartyName">PARTY TITLE</label><br /><br />
@@ -88,7 +89,9 @@ class EditScreen extends React.Component {
 
 
           </div>
-          <div><label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
+          <div><br/><br/>
+            <Divider hidden/>
+            <label className="AddScreen-PartyName">PICK A DATE</label><br /><br />
             <DatePicker className="AddScreen-DatePicker"
                         selected={this.state.startDate}
                         onChange={this.handleTimeChange}
@@ -98,18 +101,22 @@ class EditScreen extends React.Component {
                         dateFormat="LLL"
             /><br/>
           </div>
-          <div><label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
+          <div><br/>
+            <Divider hidden/>
+            <label className="AddScreen-PartyName">ADD GUEST</label><br /><br />
             <Input className="AddScreen-GuestsInput"
                    size='large'
                    value={this.state.namesInputValue}
                    onChange={this.handleGuestsNamesChange}
                    placeholder='Write your guest name...'
             />
-
+            <div>
             <Input onClick={this.addGuestsNames}
+                   className="AddScreen-AddBtn"
                    type="button"
-                   value="+"
+                   value="add"
             />
+            </div>
           </div>
           <ul>
             {
@@ -119,6 +126,7 @@ class EditScreen extends React.Component {
                       className="AddScreen-List">
                     {task.guestName}
                     <button
+                      className="Delete-Btn"
                       data-task-id={task.id}
                       onClick={this.handleDeleteClick}
                     >
@@ -130,11 +138,12 @@ class EditScreen extends React.Component {
           </ul>
           <br/><br/>
           <Button
-            className="Delete-Btn"
             color="black"
-            type='submit'>Save
+            type='submit'>Save Event
           </Button>
+          <br/><br/>
         </Form>
+        </div>
       </div>
 
     )
