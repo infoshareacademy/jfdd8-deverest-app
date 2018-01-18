@@ -1,78 +1,209 @@
 body {
-  background: url('picture/21.jpg') no-repeat left center;
-  font-family: 'Montserrat', sans-serif;
-  max-height: 100vh;
+    background-color: #14202C;
+    font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;
+    color: #D05253;
+}
+
+body.light {
+    background-color: white;
 }
 
 #root .ui.tab.active, .ui.tab.open {
-  display: block;
-  background-color: rgba(255,255,255, 0.3);
-  text-align: left
+    display: block;
+    background-color: #203040;
+    text-align: left;
 }
 
-.App {
-  text-align: center;
-  max-width: 700px;
-  height: 100vh;
-  margin: 0 auto;
+.light #root .ui.tab.active, .ui.tab.open {
+    background-color: antiquewhite;
+}
+
+div.App {
+    text-align: center;
+    max-width: 700px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
-#root .rbc-event {
-  cursor: auto;
-  color: #fff;
-  border-radius: 0;
-  background-color: rgba(0,0,0, 0.4);
+.rbc-event {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0;
+    border: 2px solid #f25a59;
+    background-color: rgba(242, 90, 89, 0.6);
+    padding: 5px 5px;
+    margin-top: 10px;
 }
 
-.rbc-off-range-bg{
-  background-color: rgba(0,0,0, 0.4);
+.rbc-show-more {
+    background-color: #182131;
+    text-align: center;
+    color: #28d674;
+    font-size: 0.8em;
 }
 
-.rbc-day-bg.rbc-today{
-  background-color: rgba(0,0,0, 0.0);
+.rbc-off-range-bg {
+    background-color: #182131;
+}
+
+.rbc-day-slot .rbc-time-slot {
+    background-color: #2a4961;
+    border-top: none;
+}
+
+.rbc-day-bg.rbc-today {
+    background-color: transparent;
 }
 
 .rbc-toolbar button {
-  color: black;
+    color: #5D718C;
 }
 
 .rbc-toolbar button:active {
-  background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #root .Search-button {
-  display: inline-block;
+    display: inline-block;
 }
 
 #root .ui.icon.input input {
-  padding-right: 15em!important;
+    padding-right: 11em !important;
 }
 
 .ui.button.clear {
-  border-top-right-radius: .28571429rem;
-  border-bottom-right-radius: .28571429rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+    border-radius: 0 .28571429rem .28571429rem 0;
 }
 
 .ui.input .search input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: .28571429rem;
-  border-bottom-left-radius: .28571429rem;
+    border-radius: .28571429rem 0 0 .28571429rem;
 }
+
+.ui.secondary.menu .item {
+    color: #D05253;
+}
+
+.ui.secondary.menu .active.item {
+    color: #D05253;
+    border: 1px solid #D05253;
+}
+
+.ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
+    color: #D05253;
+}
+
+.ui.input .search input {
+    border: 1px solid #D05253;
+    background-color: #2f4a5f;
+    color: white;
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
+    background-color: transparent;
+}
+
+.rbc-toolbar {
+    margin-top: 10px;
+}
+
+.rbc-toolbar button {
+    color: #5D718C;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.rbc-toolbar button:hover {
+    background-color: transparent !important;
+    color: rgb(242, 90, 89);
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
+    border: 1px solid rgb(242, 90, 89);
+}
+
+.rbc-date-cell > a, .rbc-date-cell > a:active, .rbc-date-cell > a:visited {
+    position: relative;
+    top: 50%;
+    right: 5%;
+}
+
+.rbc-day-bg + .rbc-day-bg {
+    border-color: rgba(93, 113, 140, 0.6);
+}
+
+.rbc-month-view .rbc-header + .rbc-header {
+    border-left: 0;
+}
+
+.rbc-month-row + .rbc-month-row {
+    border-color: rgba(93, 113, 140, 0.6);
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+    padding-top: 1%;
+    position: relative;
+    right: 30px;
+    font-size: 1.3em;
+}
+
+.ui.segment {
+    box-shadow: 2px 2px 6px 2px rgba(60, 72, 84, 0.15);
+    position: relative;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
+    margin: 0;
+    padding: 0;
+}
+
+button.ui.button {
+    background-color: #D05253;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.ui.divided.list > .item {
+    border-top: 1px solid rgba(93, 113, 140, 0.3);
+    padding: 2.5%;
+}
+
+.ui.list .list > .item > img.image + .content, .ui.list > .item > img.image + .content {
+    font-size: larger;
+}
+
+.rbc-ellipsis, .rbc-event-label, .rbc-row-segment .rbc-event-content {
+    font-size: 0.85em;
+}
+
+.Add-Event-Btn.ui.button {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+div.ui.secondary.menu {
+    padding-top: 20px;
+}
+

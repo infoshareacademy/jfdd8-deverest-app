@@ -31,7 +31,6 @@ class Details extends React.Component {
                     event={this.props.event}
                     onAddDone={this.handleClose}
                   />
-
               </Modal>
           </div>
 
@@ -48,17 +47,17 @@ class Details extends React.Component {
                    trigger={<Button color='black'>Show Guests</Button>}>
               <Modal.Description>
                 <div className='modal-body'>
-                  <ul>
+                  <ol>
                     {Object.entries(this.props.event.guestList || {}).map(
                       ([id, value]) => ({
                         id, ...value
                       })
                     ).map(
                       guest => (
-                        <li>{guest.guestName}</li>
+                        <li style={{padding: '10px 0'}}>{guest.guestName}</li>
                       )
                     )}
-                  </ul>
+                  </ol>
                 </div>
               </Modal.Description>
             </Modal>

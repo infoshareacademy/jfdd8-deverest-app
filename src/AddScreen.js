@@ -82,8 +82,6 @@ class AddScreen extends React.Component {
                      onChange={this.handlePartyNameChange}
                      placeholder='Name your party here...'
               />
-
-
             </div>
             <div><br/><br/>
               <Divider hidden/>
@@ -135,7 +133,7 @@ class AddScreen extends React.Component {
             </ul>
             <br/><br/>
             <Button color="black"
-                    type='submit'>Save
+                    type='submit'>Save Event
             </Button>
             <br/><br/>
           </Form>

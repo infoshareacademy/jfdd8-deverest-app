@@ -1,32 +1,62 @@
+.main {
+    height: 100vh;
+    background: #020d19;
+}
 
 .edit {
     position: relative;
-    top: 600px;
+    top: 50%;
     display: flex;
     justify-content: center;
 }
+
 .data {
     position: relative;
-    top: 90px;
+    top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
 h1 {
     position: absolute;
-    background-color: black;
-    opacity: .6;
-    color: white;
-    border-radius: 10px;
-    width: 50%;
+    color: #D05253;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 h2 {
     position: absolute;
-    top: 150px;
+    text-align: center;
+    top: 20px;
 }
+
+.dateView {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 5px;
+    border: 1px solid #D05253;
+}
+
+span.dateView {
+    margin-top: 2%;
+}
+
+.ui.black.button, .ui.black.buttons .button {
+    background-color: rgba(40, 214, 116, 0.8);
+    border: 2px solid rgba(40, 214, 116, 1);
+}
+
+.ui.black.button:hover, .ui.black.buttons:hover .button:hover {
+    background-color: rgba(40, 214, 116, 0.6);
+    color: #fff;
+}
+
+
+
+/* Modal with guest list */
 
 .modal {
     position: absolute;
@@ -37,40 +67,26 @@ h2 {
     display: flex;
     justify-content: center;
     /*background-color: black;*/
-    color: black;
+    color: #D05253;
     border-radius: 10px;
 }
 
 ul li {
     list-style-type: none;
-    color: black;
+    color: #D05253;
     padding: 5px;
+    /*border: 1px solid #D05253;*/
 }
 
 .modal-body {
     display: flex;
     justify-content: center;
-    background: url("./picture/21.jpg") no-repeat left center;
+    background: #020d19;
 }
 
 ul {
     padding: 0;
 }
 
-.main {
-    height: 100vh;
-    background: url("./picture/21.jpg") no-repeat left center;
-}
 
-.main :after :before {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.dateView {
-    color: white;
-    background-color: black;
-    opacity: .6;
-    padding: 5px;
-    border-radius: 10px;
-}
 
