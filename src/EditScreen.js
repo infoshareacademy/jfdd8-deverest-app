@@ -129,8 +129,10 @@ class EditScreen extends React.Component {
             }
           </ul>
           <br/><br/>
-          <Button color="black"
-                  type='submit'>Save
+          <Button
+            className="Delete-Btn"
+            color="black"
+            type='submit'>Save
           </Button>
         </Form>
       </div>
