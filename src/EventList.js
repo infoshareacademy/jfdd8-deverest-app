@@ -30,7 +30,7 @@ class EventList extends React.Component {
   }
 
   handleRemoveClick = event => {
-    const taskId = event.target.dataset.taskId;
+    const taskId = event.currentTarget.dataset.taskId;
     const uid = firebase.auth().currentUser.uid;
     firebase.database().ref('/events/' + uid + '/' + taskId).remove()
   };
