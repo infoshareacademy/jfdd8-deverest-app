@@ -206,4 +206,15 @@ button.ui.button {
 div.ui.secondary.menu {
     padding-top: 20px;
 }
+.vertical-text {
+    position: relative;
+    margin-top:0px;
+    padding: 0px;
 
+}
+
+.vertical-text span {
+    font-size: 10px;
+    position: relative;
+    top: -8px;
+}

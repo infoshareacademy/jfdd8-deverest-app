@@ -20,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App"><br/>
+        <h1 className="vertical-text">Wixer Planner Application <span>Ⓡ</span></h1>
 
         <SearchBar
           onSearch={this.onSearch}
