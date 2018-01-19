@@ -1,5 +1,5 @@
 body {
-    background-color: #14202C;
+    background-color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     max-height: 100vh;
     color: #D05253;
@@ -11,12 +11,12 @@ body.light {
 
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: #203040;
+    background-color: #fdf8f2;
     text-align: left;
 }
 
 .light #root .ui.tab.active, .ui.tab.open {
-    background-color: antiquewhite;
+    background-color: #fdf8f2;
 }
 
 div.App {
@@ -74,7 +74,7 @@ div.App {
 }
 
 .rbc-toolbar button {
-    color: #5D718C;
+    color: #EF7126;
 }
 
 .rbc-toolbar button:active {
@@ -112,8 +112,8 @@ div.App {
 
 .ui.input .search input {
     border: 1px solid #D05253;
-    background-color: #2f4a5f;
-    color: white;
+    background-color: #ffffff;
+    color: #D05253;
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
@@ -180,7 +180,7 @@ div.App {
 }
 
 button.ui.button {
-    background-color: #D05253;
+    background-color: #ED3456;
     color: rgba(0, 0, 0, 0.75);
 }
 
