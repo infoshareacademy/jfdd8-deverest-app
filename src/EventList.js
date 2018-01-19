@@ -5,12 +5,18 @@ import {BrowserRouter as Router, Link} from 'react-router-dom'
 import {Tab, Modal, Button, Icon, Header, List, Image} from 'semantic-ui-react'
 import Details from './Details'
 import firebase from 'firebase'
+import EditScreen from "./EditScreen";
 
 class EventList extends React.Component {
 
   state = {
+    editModalOpen: false,
     tasks: []
   };
+
+  handleOpenEdit = () => this.setState({editModalOpen: true});
+
+  handleCloseEdit = () => this.setState({editModalOpen: false});
 
   componentDidMount() {
     const uid = firebase.auth().currentUser.uid;
@@ -45,14 +51,34 @@ class EventList extends React.Component {
         <List divided verticalAlign='middle'>
           {this.props.events.map(
             event => {
-              const matches = event.title.match(/#(\w+)/)
-              const imageName = (matches && matches[1]) || 'default'
+              const matches = event.title.match(/#(\w+)/);
+              const imageName = (matches && matches[1]) || 'default';
               return (
                 <List.Item key={event.id}>
                   <List.Content floated='right'>
 
                     <Modal closeIcon closeOnDimmerClick={false} trigger={<Button>Details</Button>} size='small'>
-                      <Details event={event}/>
+                      <Modal.Header>
+                        {event.title}
+                      </Modal.Header>
+                      <Modal.Content scrolling>
+                        <Details event={event}/>
+                      </Modal.Content>
+                      <Modal.Actions>
+                        <Modal
+                          closeIcon
+                          closeOnDimmerClick={false}
+                          open={this.state.editModalOpen}
+                          onClose={this.handleCloseEdit}
+                          trigger={<Button onClick={this.handleOpenEdit}>EDIT</Button>}
+                          size='small'>
+                          <EditScreen
+                            event={event}
+                            onAddDone={this.handleCloseEdit}
+                          />
+                        </Modal>
+                      </Modal.Actions>
+
                     </Modal>
                     <Button
 
