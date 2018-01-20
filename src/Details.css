@@ -46,7 +46,7 @@ li.guestList {
 .ui.modals .header, .ui.modals .content, .ui.modals .actions {
     background-color: #396272;
     border-bottom: none;
-    border-top: none;
+    /*border-top: none;*/
 }
 
 .ui.small.modal {

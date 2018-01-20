@@ -24,7 +24,7 @@
 
 .AddScreen-InnerContainer {
     height: 75vh;
-    width: 600px;
+    width: 100%;
 }
 
 .AddScreen-List {
@@ -76,7 +76,7 @@
     color: #ffffff;
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
-    max-width: 100%;
+    min-width: 200px;
     margin: auto;
     padding: 0.9em;
     text-align: center;
