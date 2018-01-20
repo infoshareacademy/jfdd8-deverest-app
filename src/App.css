@@ -1,7 +1,7 @@
 body {
     background-color: #14202C;
     font-family: 'Montserrat', sans-serif;
-    max-height: 100vh;
+    height: auto;
     color: #D05253;
 }
 
@@ -22,7 +22,7 @@ body.light {
 div.App {
     text-align: center;
     max-width: 700px;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     position: relative;
     top: -40px;
@@ -106,8 +106,21 @@ div.App {
     border: 1px solid #D05253;
 }
 
+.ui.secondary.menu .dropdown.item:hover, .ui.secondary.menu .link.item:hover, .ui.secondary.menu a.item:hover {
+    background: transparent;
+    color: #D05253;
+}
+
 .ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
     color: #D05253;
+}
+
+.rbc-toolbar button:active:hover, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:focus {
+    color: #D05253;
+    background-color: transparent;
+    border-color: #D05253;
+    border-radius: 5px;
+    outline: 0;
 }
 
 .ui.input .search input {
@@ -118,6 +131,7 @@ div.App {
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
     background-color: transparent;
+    outline: 0;
 }
 
 .rbc-toolbar {
@@ -137,13 +151,27 @@ div.App {
     cursor: pointer;
 }
 
+.rbc-toolbar button:focus {
+    color: #D05253;
+    background: transparent;
+    outline: 0;
+}
+
 .rbc-toolbar button:hover {
     background-color: transparent !important;
     color: rgb(242, 90, 89);
 }
 
+.rbc-toolbar button:active {
+    color: #D05253;
+    background-color: transparent;
+    border-color: #D05253;
+    outline: 0;
+}
+
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
-    border: 1px solid rgb(242, 90, 89);
+    color: rgb(242, 90, 89);
+    box-shadow: none;
 }
 
 .rbc-date-cell > a, .rbc-date-cell > a:active, .rbc-date-cell > a:visited {
@@ -165,10 +193,14 @@ div.App {
 }
 
 .rbc-toolbar .rbc-toolbar-label {
-    padding-top: 1%;
+    padding: 0 10px 0 0;
     position: relative;
-    right: 30px;
+    right: 20px;
     font-size: 1.3em;
+}
+
+.rbc-today {
+    background-color: #203040;
 }
 
 .ui.segment {

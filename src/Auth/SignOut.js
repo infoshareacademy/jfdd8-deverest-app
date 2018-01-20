@@ -18,7 +18,7 @@ class SignOut extends Component {
 
     render() {
         return (
-            <div style={{ display: 'inline-block'}}>
+            <div>
                 {
                     this.state.user ?
                       <Button className='signOut-button' onClick={() => firebase.auth().signOut()} animated='horizontal'>
