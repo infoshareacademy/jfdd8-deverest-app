@@ -2,7 +2,7 @@ body {
     background: url("3.jpg") no-repeat;
     font-family: 'Montserrat', sans-serif;
     height: auto;
-    color: #000000;
+    color: #ffffff;
 }
 
 body.light {
@@ -11,7 +11,7 @@ body.light {
 
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: #ffffff;
+    background-color: rgba(255,255,255,0.3);
     text-align: left;
 }
 
@@ -102,7 +102,7 @@ div.App {
 }
 
 .ui.secondary.menu .active.item {
-    color: #D05253;
+    color: #ffffff;
     border: 1px solid #D05253;
 }
 
@@ -112,7 +112,7 @@ div.App {
 }
 
 .ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
-    color: #D05253;
+    color: #ffffff;
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:focus {
@@ -125,8 +125,8 @@ div.App {
 
 .ui.input .search input {
     border: 1px solid #D05253;
-    background-color: #ffffff;
-    color: white;
+    background-color: rgba(255,255,255,0.9);
+    color: black;
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
@@ -212,8 +212,8 @@ div.App {
 }
 
 button.ui.button {
-    background-color: #8ace68;
-    color: rgba(255, 255, 255, 0.75);
+    background-color: #ffffff;
+    color: rgba(255, 22, 16, 0.75);
 }
 
 .ui.divided.list > .item {

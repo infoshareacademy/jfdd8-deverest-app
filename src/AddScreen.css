@@ -193,7 +193,8 @@ li.react-datepicker__time-list-item {
 }
 
  button.ui.button:hover {
-     background-color: #f67d54;
+     background-color: #8ace68;
+     color: white;
      cursor: pointer;
  }
 
