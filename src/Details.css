@@ -1,4 +1,4 @@
-.main {
+.main  {
     height: 50vh;
     background: #020d19;
 }
@@ -19,23 +19,37 @@ span.dateView {
     width: 50%;
 }
 
-div.header {
+ div.header {
     text-align: center;
 }
 
-ol {
+ol.guestList {
     padding-left: 30%;
 }
 
-li {
+li.guestList {
     color: white;
 }
 
 .ui.small.modal > .header:not(.ui) {
     font-size: 2em;
 }
+.ui.modal>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
 
 .ui.modals .header, .ui.modals .content, .ui.modals .actions {
     background: #020d19;
     color: #D05253;
+}
+
+.ui.small.modal {
+    width: 680px;
+    background: #020d19;
+    padding-bottom: 3%;
+}
+
+div.ui.header {
+    padding-top: 3%;
 }

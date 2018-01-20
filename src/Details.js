@@ -15,7 +15,7 @@ class Details extends React.Component {
             </span>
           </Header>
         </Modal.Description>
-          <ol>{
+          <ol className='guestList'>{
             (this.props.event.guestList || []).map(guest => (
               <li>{guest.guestName}</li>
             ))
