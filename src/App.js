@@ -9,7 +9,6 @@ import { search, reset } from './state/searching'
 
 class App extends Component {
 
-
   onSearch = (text) => {
     this.props.search(text)
   };
