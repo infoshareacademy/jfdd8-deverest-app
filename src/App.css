@@ -1,23 +1,30 @@
 body {
-    background-color: #14202C;
+    background: -webkit-linear-gradient(to bottom, #2C3E50, #4CA1AF);
+    background: -moz-linear-gradient(to bottom, #2C3E50, #4CA1AF);
+    background: -ms-linear-gradient(to bottom, #2C3E50, #4CA1AF);
+    background: -o-linear-gradient(to bottom, #2C3E50, #4CA1AF);
+    background: linear-gradient(to bottom, #2C3E50, #4CA1AF);
+    position: absolute;
+    width: 100%;
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
-    height: auto;
-    color: #D05253;
+    color: white;
 }
 
-body.light {
-    background-color: white;
-}
+/*body.light {*/
+    /*background-color: white;*/
+/*}*/
 
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: #203040;
+    background-color: rgba(44,62,80, 0.5);
+    border: 1px solid rgba(44,62,80, 0.7) ;
     text-align: left;
 }
 
-.light #root .ui.tab.active, .ui.tab.open {
-    background-color: antiquewhite;
-}
+/*.light #root .ui.tab.active, .ui.tab.open {*/
+    /*background-color: antiquewhite;*/
+/*}*/
 
 div.App {
     text-align: center;
@@ -45,10 +52,10 @@ div.App {
 
 .rbc-event {
     cursor: pointer;
-    color: #fff;
+    color: #333333;
     border-radius: 0;
-    border: 2px solid #f25a59;
-    background-color: rgba(242, 90, 89, 0.6);
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 5px 5px;
     margin-top: 10px;
 }
@@ -56,12 +63,12 @@ div.App {
 .rbc-show-more {
     background-color: #182131;
     text-align: center;
-    color: #28d674;
+    color: white;
     font-size: 0.8em;
 }
 
 .rbc-off-range-bg {
-    background-color: #182131;
+    background-color: rgba(44,62,80, 1);
 }
 
 .rbc-day-slot .rbc-time-slot {
