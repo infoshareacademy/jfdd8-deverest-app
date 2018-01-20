@@ -1,24 +1,23 @@
 body {
     background: url("./picture/sunset.jpg") no-repeat center center;
-    /*#C06C84, #6C5B7B, #355C7D;*/
     font-family: 'Montserrat', sans-serif;
     height: auto;
     color: white;
 }
 
 /*body.light {*/
-    /*background-color: white;*/
+/*background-color: white;*/
 /*}*/
 
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: rgba(44,62,80, 0.4);
-    border: 1px solid rgba(44,62,80, 0.8) ;
+    background-color: rgba(44, 62, 80, 0.4);
+    border: 1px solid rgba(44, 62, 80, 0.8);
     text-align: left;
 }
 
 /*.light #root .ui.tab.active, .ui.tab.open {*/
-    /*background-color: antiquewhite;*/
+/*background-color: antiquewhite;*/
 /*}*/
 
 div.App {
@@ -63,7 +62,7 @@ div.App {
 }
 
 .rbc-off-range-bg {
-    background-color: rgba(44,62,80, 0.7);
+    background-color: rgba(44, 62, 80, 0.7);
 }
 
 .rbc-day-slot .rbc-time-slot {
@@ -73,14 +72,6 @@ div.App {
 
 .rbc-day-bg.rbc-today {
     background-color: transparent;
-}
-
-.rbc-toolbar button {
-    color: #C06C84;
-}
-
-.rbc-toolbar button:active {
-    background-color: #C06C84;
 }
 
 #root .Search-button {
@@ -162,7 +153,9 @@ div.App {
     background: transparent;
     outline: 0;
 }
-
+.ui.button:focus {
+    background-color: rgba(192, 108, 132, 0.6);
+}
 .rbc-toolbar button:hover {
     background-color: transparent !important;
     color: #4ca1af;
@@ -218,7 +211,7 @@ div.App {
 }
 
 button.ui.button {
-    background-color: rgba(192, 108, 132, 0.6);
+    background-color: rgba(208, 108, 132, 0.6);
     color: rgba(255, 255, 255, 0.9);
 }
 

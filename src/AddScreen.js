@@ -109,7 +109,7 @@ class AddScreen extends React.Component {
                     onClick={this.addGuestsNames}
                      className="AddScreen-AddBtn"
                      type="button"
-                     value="add"
+                     value="+"
               />
               </div>
             </div>
