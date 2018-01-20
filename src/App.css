@@ -1,8 +1,8 @@
 body {
-    background-color: #14202C;
+    background-color: #1a2930;
     font-family: 'Montserrat', sans-serif;
     max-height: 100vh;
-    color: #D05253;
+    color: #0a1612;
 }
 
 body.light {
@@ -10,14 +10,9 @@ body.light {
     color: #14213D;
 }
 
-/*#root .ui.tab.active, .ui.tab.open {*/
-    /*display: block;*/
-    /*background-color: #203040;*/
-    /*text-align: left;*/
-/*}*/
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: #fca311;
+    background-color: #c5c1c0;
     text-align: left;
 }
 

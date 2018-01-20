@@ -49,4 +49,4 @@ ReactDOM.render(
 registerServiceWorker();
 
 
-document.querySelector('body').classList.add('light')
+// document.querySelector('body').classList.add('light')
