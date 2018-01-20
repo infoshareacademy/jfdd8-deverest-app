@@ -1,5 +1,5 @@
 body {
-    background: url("./picture/sunset.jpg") no-repeat bottom center;
+    background: url("./picture/sunset.jpg") no-repeat center center;
     /*#C06C84, #6C5B7B, #355C7D;*/
     font-family: 'Montserrat', sans-serif;
     height: auto;
@@ -67,7 +67,7 @@ div.App {
 }
 
 .rbc-day-slot .rbc-time-slot {
-    background-color: rgba(76, 161, 175, 1);
+    background-color: rgba(76, 161, 175, 0.2);
     border-top: none;
 }
 
