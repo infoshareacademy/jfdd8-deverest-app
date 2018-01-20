@@ -1,8 +1,8 @@
 body {
     background: url("./picture/blue.jpg") no-repeat center center;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     height: auto;
-    color: white;
 }
 
 /*body.light {*/
@@ -10,9 +10,9 @@ body {
 /*}*/
 
 #root .ui.tab.active, .ui.tab.open {
-    display: block;
     background-color: rgba(44, 62, 80, 0.4);
     border: 1px solid rgba(44, 62, 80, 0.8);
+    display: block;
     text-align: left;
 }
 
@@ -21,19 +21,19 @@ body {
 /*}*/
 
 div.App {
-    text-align: center;
-    max-width: 700px;
     height: auto;
     margin: 0 auto;
+    max-width: 700px;
     position: relative;
+    text-align: center;
     top: -40px;
 }
 
 .App-header {
     background-color: #222;
+    color: white;
     height: 150px;
     padding: 20px;
-    color: white;
 }
 
 .App-title {
@@ -45,20 +45,21 @@ div.App {
 }
 
 .rbc-event {
-    cursor: pointer;
-    color: white;
-    border-radius: 0;
     border: 1px solid rgba(192, 108, 132, 1);
     background-color: rgba(192, 108, 132, 0.6);
-    padding: 5px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
     margin-top: 10px;
+    padding: 5px 5px;
 }
 
 .rbc-show-more {
     background-color: rgba(76, 161, 175, 0.7);
-    text-align: center;
+    border-radius: 4px;
     color: white;
     font-size: 0.8em;
+    text-align: center;
 }
 
 .rbc-off-range-bg {
@@ -95,8 +96,8 @@ div.App {
 }
 
 .ui.secondary.menu .active.item {
-    color: #4ca1af;
     border: 1px solid #C06C84;
+    color: #4ca1af;
 }
 
 .ui.secondary.menu .dropdown.item:hover, .ui.secondary.menu .link.item:hover, .ui.secondary.menu a.item:hover {
@@ -109,11 +110,10 @@ div.App {
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:focus {
-    color: #4ca1af;
     background-color: transparent;
     border: 1px solid #C06C84;
-
     border-radius: 5px;
+    color: #4ca1af;
     outline: 0;
 }
 
@@ -129,9 +129,9 @@ div.App {
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
     background-color: transparent;
-    outline: 0;
     border: 1px solid #C06C84;
     border-radius: 4px;
+    outline: 0;
 }
 
 .rbc-btn-group > button:first-child:not(:last-child) {
@@ -144,47 +144,49 @@ div.App {
 }
 
 .rbc-toolbar button {
+    background: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
     color: #C06C84;
     display: inline-block;
     margin: 0;
+    padding: 0.8rem 1rem 0.8rem 1rem;
     text-align: center;
     vertical-align: middle;
-    background: none;
-    border: none;
-    padding: 0.8rem 1rem 0.8rem 1rem;
-    border-radius: 0;
-    cursor: pointer;
 }
 
 .rbc-toolbar button:focus {
-    color: #4ca1af;
     background: transparent;
+    color: #4ca1af;
     outline: 0;
 }
+
 .ui.button:focus {
     background-color: rgba(192, 108, 132, 0.6);
 }
+
 .rbc-toolbar button:hover {
     background-color: transparent !important;
     color: #4ca1af;
 }
 
 .rbc-toolbar button:active {
-    color: #4ca1af;
     background-color: transparent;
     border-color: rgba(76, 161, 175, 0.6);
+    color: #4ca1af;
     outline: 0;
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
-    color: #4ca1af;
     box-shadow: none;
+    color: #4ca1af;
 }
 
 .rbc-date-cell > a, .rbc-date-cell > a:active, .rbc-date-cell > a:visited {
     position: relative;
-    top: 50%;
     right: 5%;
+    top: 50%;
 }
 
 .rbc-day-bg + .rbc-day-bg {
@@ -200,10 +202,10 @@ div.App {
 }
 
 .rbc-toolbar .rbc-toolbar-label {
+    font-size: 1.3em;
     padding: 0 10px 0 0;
     position: relative;
     right: 20px;
-    font-size: 1.3em;
 }
 
 .rbc-today {
@@ -212,10 +214,10 @@ div.App {
 
 .ui.segment {
     box-shadow: 2px 2px 6px 2px rgba(60, 72, 84, 0.15);
-    position: relative;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
     margin: 0;
     padding: 0;
+    position: relative;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
 }
 
 button.ui.button {
