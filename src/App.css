@@ -1,12 +1,12 @@
 body {
-    background: url("./picture/sunset.jpg") no-repeat center center;
+    background: url("./picture/blue.jpg") no-repeat center center;
     font-family: 'Montserrat', sans-serif;
     height: auto;
     color: white;
 }
 
 /*body.light {*/
-/*background-color: white;*/
+/*background: url("./picture/blue.jpg") no-repeat center center;*/
 /*}*/
 
 #root .ui.tab.active, .ui.tab.open {
