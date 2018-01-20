@@ -1,8 +1,8 @@
 body {
-    background-color: #14202C;
+    background: url("3.jpg") no-repeat;
     font-family: 'Montserrat', sans-serif;
     height: auto;
-    color: #D05253;
+    color: #000000;
 }
 
 body.light {
@@ -11,7 +11,7 @@ body.light {
 
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: #203040;
+    background-color: #ffffff;
     text-align: left;
 }
 
@@ -125,7 +125,7 @@ div.App {
 
 .ui.input .search input {
     border: 1px solid #D05253;
-    background-color: #2f4a5f;
+    background-color: #ffffff;
     color: white;
 }
 
@@ -212,8 +212,8 @@ div.App {
 }
 
 button.ui.button {
-    background-color: #D05253;
-    color: rgba(0, 0, 0, 0.75);
+    background-color: #8ace68;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .ui.divided.list > .item {
