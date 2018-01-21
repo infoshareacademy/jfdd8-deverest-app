@@ -61,11 +61,11 @@ div.App {
 }
 
 .rbc-off-range-bg {
-    background-color: #182131;
+    background-color: rgba(255, 255, 255, 0.75)
 }
 
 .rbc-day-slot .rbc-time-slot {
-    background-color: #2a4961;
+    background-color: rgba(255, 255, 255, 0.75);
     border-top: none;
 }
 
@@ -116,9 +116,9 @@ div.App {
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:focus {
-    color: #D05253;
+    color: rgb(242, 90, 89);
     background-color: transparent;
-    border-color: #D05253;
+    border-color: rgb(242, 90, 89);
     border-radius: 5px;
     outline: 0;
 }
@@ -139,7 +139,7 @@ div.App {
 }
 
 .rbc-toolbar button {
-    color: #5D718C;
+    color: #ffffff;
     display: inline-block;
     margin: 0;
     text-align: center;
@@ -200,7 +200,7 @@ div.App {
 }
 
 .rbc-today {
-    background-color: #203040;
+    background-color: rgba(255, 255, 255, 0.75)
 }
 
 .ui.segment {
