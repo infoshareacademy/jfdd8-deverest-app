@@ -54,9 +54,9 @@ div.App {
 }
 
 .rbc-show-more {
-    background-color: #182131;
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
-    color: #28d674;
+    color: #D05253;
     font-size: 0.8em;
 }
 
@@ -239,3 +239,11 @@ div.ui.secondary.menu {
     padding-top: 20px;
 }
 
+.ui.secondary.menu .active.item:hover {
+  background: rgba(0,0,0,.05);
+    color: #D05253;
+}
+
+.rbc-event.rbc-selected {
+    background-color: rgba(242, 90, 89, 0.6);
+}
