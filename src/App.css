@@ -1,5 +1,5 @@
 body {
-    background: url("./picture/blue.jpg") no-repeat center center;
+    background: url("./picture/sunset.jpg") no-repeat center center;
     color: white;
     font-family: 'Montserrat', sans-serif;
     height: auto;
@@ -164,6 +164,10 @@ div.App {
 
 .ui.button:focus {
     background-color: rgba(192, 108, 132, 0.6);
+}
+
+.ui.button:hover {
+    background-color: rgba(76, 161, 175, 0.6);
 }
 
 .rbc-toolbar button:hover {
