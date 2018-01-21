@@ -1,5 +1,5 @@
 .AddScreen-container {
-    background: #020d19;
+    background: rgba(255,255,255,0.9);
     display: flex;
     justify-content: center;
     color: #D05253;
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #D05253;
     text-align: match-parent;
     vertical-align: bottom!important;
     padding: 10px 0;
@@ -44,12 +44,12 @@
     color: white;
     padding: 5px;
     border: 1px solid #D05253;
-    background-color: rgba(208, 82, 83, 0.4);
+    background-color: rgba(208, 82, 83, 0.8);
 }
 
 .AddScreen-List .Delete-Btn:hover {
     cursor: pointer;
-    background-color: rgba(208, 82, 83, 0.2);
+    background-color: rgba(208, 82, 83, 1);
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
@@ -66,12 +66,12 @@
 }
 
 .react-datepicker {
-    background-color: #4a6a82;
+    background-color: rgba(242, 90, 89, 0.9);
 }
 
 .AddScreen-DatePicker, .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
     width: 350px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 22, 16, 0.75);
     font-family: 'Montserrat', sans-serif;
     border: 1px solid #D05253;
     padding: 0.9em;
@@ -84,8 +84,8 @@
 
 .ui.form input:not([type]):focus, .ui.form input[type=date]:focus, .ui.form input[type=datetime-local]:focus, .ui.form input[type=email]:focus, .ui.form input[type=file]:focus, .ui.form input[type=number]:focus, .ui.form input[type=password]:focus, .ui.form input[type=search]:focus, .ui.form input[type=tel]:focus, .ui.form input[type=text]:focus, .ui.form input[type=time]:focus, .ui.form input[type=url]:focus {
     border: 1px solid rgba(40, 214, 116, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
 }
 
 .react-datepicker__day--selected {
@@ -93,8 +93,8 @@
 }
 
 input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    color: #D05253 !important;
+    background-color: rgba(255, 22, 16, 0.75) !important;
+    color: white!important;
     border-color: white !important;
 }
 
@@ -103,15 +103,15 @@ input.AddScreen-DatePicker.react-datepicker-ignore-onclickoutside {
 }
 
 .react-datepicker__month-container {
-    background-color: #4a6a82;
+    background-color: rgba(242, 90, 89, 0.6);
 }
 
 .react-datepicker__header, .react-datepicker__header--time {
-    background-color: #1b222f;
+    background-color: white
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list {
-    background-color: #4a6a82;
+    background-color: rgba(242, 90, 89, 0.6);
 }
 
 .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
@@ -135,7 +135,7 @@ li.react-datepicker__time-list-item {
 }
 
 .AddScreen-container .ui.input input {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 22, 16, 0.75);
     font-family: 'Montserrat', sans-serif;
     border: 1px solid #D05253;
     padding: 0.9em;
@@ -148,13 +148,13 @@ li.react-datepicker__time-list-item {
 }
 
 .AddScreen-container .ui.input input:focus {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(40, 214, 116, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #D05253;
+    color: black;
 }
 
 .AddScreen-container .ui.input input:active {
-    background: rgba(0, 0, 0, 0.5);
+    background: white;
     color: white;
 }
 
