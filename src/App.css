@@ -1,8 +1,8 @@
 body {
-    background-color: #14202C;
+    background: url("3.jpg") no-repeat;
     font-family: 'Montserrat', sans-serif;
     height: auto;
-    color: #D05253;
+    color: #ffffff;
 }
 
 body.light {
@@ -11,7 +11,7 @@ body.light {
 
 #root .ui.tab.active, .ui.tab.open {
     display: block;
-    background-color: #203040;
+    background-color: rgba(255,255,255,0.3);
     text-align: left;
 }
 
@@ -54,18 +54,21 @@ div.App {
 }
 
 .rbc-show-more {
-    background-color: #182131;
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
-    color: #28d674;
+    color: #D05253;
     font-size: 0.8em;
+}
+.rbc-show-more:hover {
+    background-color: #8ace68;
 }
 
 .rbc-off-range-bg {
-    background-color: #182131;
+    background-color: rgba(255, 255, 255, 0.75)
 }
 
 .rbc-day-slot .rbc-time-slot {
-    background-color: #2a4961;
+    background-color: rgba(255, 255, 255, 0.75);
     border-top: none;
 }
 
@@ -102,7 +105,7 @@ div.App {
 }
 
 .ui.secondary.menu .active.item {
-    color: #D05253;
+    color: #ffffff;
     border: 1px solid #D05253;
 }
 
@@ -112,21 +115,21 @@ div.App {
 }
 
 .ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
-    color: #D05253;
+    color: #ffffff;
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:focus {
-    color: #D05253;
+    color: rgb(242, 90, 89);
     background-color: transparent;
-    border-color: #D05253;
+    border-color: rgb(242, 90, 89);
     border-radius: 5px;
     outline: 0;
 }
 
 .ui.input .search input {
     border: 1px solid #D05253;
-    background-color: #2f4a5f;
-    color: white;
+    background-color: rgba(255,255,255,0.9);
+    color: black;
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
@@ -139,7 +142,7 @@ div.App {
 }
 
 .rbc-toolbar button {
-    color: #5D718C;
+    color: #ffffff;
     display: inline-block;
     margin: 0;
     text-align: center;
@@ -200,7 +203,7 @@ div.App {
 }
 
 .rbc-today {
-    background-color: #203040;
+    background-color: rgba(255, 255, 255, 0.75)
 }
 
 .ui.segment {
@@ -212,8 +215,8 @@ div.App {
 }
 
 button.ui.button {
-    background-color: #D05253;
-    color: rgba(0, 0, 0, 0.75);
+    background-color: #ffffff;
+    color: rgba(255, 22, 16, 0.75);
 }
 
 .ui.divided.list > .item {
@@ -239,3 +242,11 @@ div.ui.secondary.menu {
     padding-top: 20px;
 }
 
+.ui.secondary.menu .active.item:hover {
+  background: rgba(0,0,0,.05);
+    color: #D05253;
+}
+
+.rbc-event.rbc-selected {
+    background-color: rgba(242, 90, 89, 0.6);
+}
