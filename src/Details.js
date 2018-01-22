@@ -23,8 +23,7 @@ class Details extends React.Component {
           </ol>
         {/*</div>*/}
       </div>
-    )
-  }
+    )}
 }
 
 export default Details;
