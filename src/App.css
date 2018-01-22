@@ -1,38 +1,39 @@
 body {
-    background: url("3.jpg") no-repeat;
+    background: url("./picture/sunset.jpg") no-repeat center center;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     height: auto;
-    color: #ffffff;
 }
 
-body.light {
-    background-color: white;
-}
+/*body.light {*/
+/*background: url("./picture/blue.jpg") no-repeat center center;*/
+/*}*/
 
 #root .ui.tab.active, .ui.tab.open {
+    background-color: rgba(44, 62, 80, 0.4);
+    border: 1px solid rgba(44, 62, 80, 0.8);
     display: block;
-    background-color: rgba(255,255,255,0.3);
     text-align: left;
 }
 
-.light #root .ui.tab.active, .ui.tab.open {
-    background-color: antiquewhite;
-}
+/*.light #root .ui.tab.active, .ui.tab.open {*/
+/*background-color: antiquewhite;*/
+/*}*/
 
 div.App {
-    text-align: center;
-    max-width: 700px;
     height: auto;
     margin: 0 auto;
+    max-width: 700px;
     position: relative;
+    text-align: center;
     top: -40px;
 }
 
 .App-header {
     background-color: #222;
+    color: white;
     height: 150px;
     padding: 20px;
-    color: white;
 }
 
 .App-title {
@@ -44,44 +45,34 @@ div.App {
 }
 
 .rbc-event {
+    border: 1px solid rgba(192, 108, 132, 1);
+    background-color: rgba(192, 108, 132, 0.6);
+    border-radius: 4px;
     cursor: pointer;
-    color: #fff;
-    border-radius: 0;
-    border: 2px solid #f25a59;
-    background-color: rgba(242, 90, 89, 0.6);
-    padding: 5px 5px;
+    color: white;
     margin-top: 10px;
+    padding: 5px 5px;
 }
 
 .rbc-show-more {
-    background-color: rgba(255, 255, 255, 0.75);
-    text-align: center;
-    color: #D05253;
+    background-color: rgba(76, 161, 175, 0.7);
+    border-radius: 4px;
+    color: white;
     font-size: 0.8em;
-}
-.rbc-show-more:hover {
-    background-color: #8ace68;
+    text-align: center;
 }
 
 .rbc-off-range-bg {
-    background-color: rgba(255, 255, 255, 0.75)
+    background-color: rgba(44, 62, 80, 0.7);
 }
 
 .rbc-day-slot .rbc-time-slot {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(76, 161, 175, 0.2);
     border-top: none;
 }
 
 .rbc-day-bg.rbc-today {
     background-color: transparent;
-}
-
-.rbc-toolbar button {
-    color: #5D718C;
-}
-
-.rbc-toolbar button:active {
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #root .Search-button {
@@ -101,40 +92,51 @@ div.App {
 }
 
 .ui.secondary.menu .item {
-    color: #D05253;
+    color: #4ca1af;
 }
 
 .ui.secondary.menu .active.item {
-    color: #ffffff;
-    border: 1px solid #D05253;
+    border: 1px solid #C06C84;
+    color: #4ca1af;
 }
 
 .ui.secondary.menu .dropdown.item:hover, .ui.secondary.menu .link.item:hover, .ui.secondary.menu a.item:hover {
     background: transparent;
-    color: #D05253;
+    color: #4ca1af;
 }
 
 .ui.secondary.menu .dropdown.item, .ui.secondary.menu .link.item, .ui.secondary.menu a.item {
-    color: #ffffff;
+    color: #C06C84;
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:focus {
-    color: rgb(242, 90, 89);
     background-color: transparent;
-    border-color: rgb(242, 90, 89);
+    border: 1px solid #C06C84;
     border-radius: 5px;
+    color: #4ca1af;
     outline: 0;
 }
 
+.ui.secondary.menu .active.item:hover {
+    color: #4ca1af;
+}
+
 .ui.input .search input {
-    border: 1px solid #D05253;
-    background-color: rgba(255,255,255,0.9);
-    color: black;
+    border: 1px solid rgba(44, 62, 80, 1);
+    background-color: rgba(44, 62, 80, 0.4);
+    color: white;
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
     background-color: transparent;
+    border: 1px solid #C06C84;
+    border-radius: 4px;
     outline: 0;
+}
+
+.rbc-btn-group > button:first-child:not(:last-child) {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .rbc-toolbar {
@@ -142,45 +144,53 @@ div.App {
 }
 
 .rbc-toolbar button {
-    color: #ffffff;
-    display: inline-block;
-    margin: 0;
-    text-align: center;
-    vertical-align: middle;
     background: none;
     border: none;
-    padding: 0.8rem 1rem 0.8rem 1rem;
     border-radius: 0;
     cursor: pointer;
+    color: #C06C84;
+    display: inline-block;
+    margin: 0;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .rbc-toolbar button:focus {
-    color: #D05253;
     background: transparent;
+    color: #4ca1af;
     outline: 0;
+}
+
+.ui.button:focus {
+    background-color: rgba(192, 108, 132, 0.6);
+}
+
+.ui.button:hover {
+    background-color: rgba(76, 161, 175, 0.6);
 }
 
 .rbc-toolbar button:hover {
     background-color: transparent !important;
-    color: rgb(242, 90, 89);
+    color: #4ca1af;
 }
 
 .rbc-toolbar button:active {
-    color: #D05253;
     background-color: transparent;
-    border-color: #D05253;
+    border-color: rgba(76, 161, 175, 0.6);
+    color: #4ca1af;
     outline: 0;
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
-    color: rgb(242, 90, 89);
     box-shadow: none;
+    color: #4ca1af;
 }
 
 .rbc-date-cell > a, .rbc-date-cell > a:active, .rbc-date-cell > a:visited {
     position: relative;
-    top: 50%;
     right: 5%;
+    top: 50%;
 }
 
 .rbc-day-bg + .rbc-day-bg {
@@ -196,27 +206,27 @@ div.App {
 }
 
 .rbc-toolbar .rbc-toolbar-label {
+    font-size: 1.3em;
     padding: 0 10px 0 0;
     position: relative;
     right: 20px;
-    font-size: 1.3em;
 }
 
 .rbc-today {
-    background-color: rgba(255, 255, 255, 0.75)
+    background-color: #203040;
 }
 
 .ui.segment {
     box-shadow: 2px 2px 6px 2px rgba(60, 72, 84, 0.15);
-    position: relative;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
     margin: 0;
     padding: 0;
+    position: relative;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
 }
 
 button.ui.button {
-    background-color: #ffffff;
-    color: rgba(255, 22, 16, 0.75);
+    background-color: rgba(208, 108, 132, 0.6);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .ui.divided.list > .item {
@@ -242,11 +252,3 @@ div.ui.secondary.menu {
     padding-top: 20px;
 }
 
-.ui.secondary.menu .active.item:hover {
-  background: rgba(0,0,0,.05);
-    color: #D05253;
-}
-
-.rbc-event.rbc-selected {
-    background-color: rgba(242, 90, 89, 0.6);
-}

@@ -1,17 +1,11 @@
-.main  {
-    height: 50vh;
-    background: #020d19;
-}
-
 .dateView {
+    border-bottom: 1px solid rgba(44, 62, 80, 0.7);
+    border-top: 1px solid rgba(44, 62, 80, 0.7);
+    color: white;
     display: flex;
     flex-direction: column;
-    color: white;
     padding: 5px;
-    border: 1px solid #D05253;
     text-align: center;
-    background: rgba(255, 22, 16, 0.75);
-    border-radius: 5px;
 }
 
 span.dateView {
@@ -21,11 +15,12 @@ span.dateView {
     width: 50%;
 }
 
- div.header {
-    text-align: center;
+.ui.header {
+    color: white;
 }
 
 ol.guestList {
+    font-size: 1.2em;
     padding-left: 30%;
 }
 
@@ -34,24 +29,31 @@ li.guestList {
 }
 
 .ui.small.modal > .header:not(.ui) {
-    font-size: 2em;
+    font-size: 2.5em;
 }
-.ui.modal>:last-child {
+
+.ui.modal > .header {
+    color: white;
+    font-size: 2.2em;
+    padding-top: 4%;
+}
+
+.ui.modal > :last-child {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .ui.modals .header, .ui.modals .content, .ui.modals .actions {
-    background: white;
-    color: #D05253;
+    background-color: #396272;
+    border-bottom: none;
+    /*border-top: none;*/
 }
 
 .ui.small.modal {
+    background-color: #396272;
     width: 680px;
-    background: white;
-    padding-bottom: 3%;
 }
 
-div.ui.header {
-    padding-top: 3%;
+div.header {
+    text-align: center;
 }

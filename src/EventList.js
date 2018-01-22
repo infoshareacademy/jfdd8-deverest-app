@@ -45,7 +45,7 @@ class EventList extends React.Component {
     return (
       <div>
         {
-          this.props.searchPhrase && <p style={{padding: '5px 0 0 10px'}}>Searched phrase:  <span style={{color: 'green', padding: '5px'}}>"{this.props.searchPhrase}"</span></p>
+          this.props.searchPhrase && <p style={{padding: '5px 0 0 10px'}}>Searched phrase:  <span style={{color: '#D05253', padding: '5px'}}>"{this.props.searchPhrase}"</span></p>
         }
 
         <List divided verticalAlign='middle'>
